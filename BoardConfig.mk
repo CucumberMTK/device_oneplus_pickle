@@ -56,8 +56,8 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 370
 
-# Fingerprint
-#TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
+# UDFPS
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.RMX3031
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 4

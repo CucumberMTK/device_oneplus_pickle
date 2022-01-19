@@ -11,5 +11,5 @@
      <integer name="config_udfpsEnrollProgressBar" translatable="false">91</integer>
          <!-- UDFPS Color -->
      <color name="config_udfpsColor">#00ffffff</color>
-     <!--    <integer name="config_udfps_hbm_type">0</integer> -->
+     <integer name="config_udfps_hbm_type">0</integer>
 </resources>
