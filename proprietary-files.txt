@@ -3296,6 +3296,7 @@ odm/etc/nfc/st21nfc_fw.bin_st21h_fw_01_20
 odm/etc/nfc/st21nfc_fw7.bin_st21h
 odm/etc/nfc/st21nfc_fw7.bin_st21h_fw_01_20
 odm/etc/normalize/flags.prop
+odm/etc/orms/orms_permission_config.xml
 odm/etc/power_profile/power_profile.xml
 odm/etc/rftoolkit/proj_cases.xml
 odm/etc/sensor/sensor_config.json
