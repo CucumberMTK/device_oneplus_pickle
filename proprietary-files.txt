@@ -1566,7 +1566,6 @@ lib64/libmtk_vt_service.so
 lib64/libmtk_vt_wrapper.so
 lib64/libmtkperf_client.so
 lib64/libsignal.so
-lib64/libsink.so
 lib64/libsource.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
@@ -6305,3 +6304,8 @@ vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
 vendor/ro.prop
 vendor/rw.prop
+
+# Fixup
+vendor/bin/mtk_agpsd
+vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
+lib64/libsink.so

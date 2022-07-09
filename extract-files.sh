@@ -51,6 +51,9 @@ done
 
 function blob_fixup() {
     case "${1}" in
+	lib64/libsink.so)
+            "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
+            ;;
         vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
             "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
             ;;
