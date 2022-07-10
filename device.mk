@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 PRODUCT_PACKAGES += \
+    bootctrl.default \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-service \
     android.hardware.boot@1.2-impl.recovery \
