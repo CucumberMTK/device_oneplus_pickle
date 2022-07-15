@@ -105,8 +105,14 @@ PRODUCT_PACKAGES += \
     
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.3-service \
+    libdrm.vendor \
     libvulkan
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4.vendor
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -118,6 +124,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0.vendor
+
+# Gnss
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -143,9 +155,11 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0 \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
-    android.hidl.memory.block@1.0 \
+    android.hidl.memory.block@1.0.vendor \
     libhidltransport \
-    libhwbinder 
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor \
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -271,9 +285,9 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6 \
-    android.hardware.radio.config@1.3 \
-    android.hardware.secure_element@1.2
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.secure_element@1.2.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -328,6 +342,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor
+    
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
