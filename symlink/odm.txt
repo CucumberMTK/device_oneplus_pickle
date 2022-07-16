@@ -1,0 +1,11 @@
+bin/crossbuild/DataSet/SQLiteModule/db/ParameterDB.db
+bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db
+bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db
+bin/crossbuild/DataSet/SQLiteModule/db/awb/ParameterDB_awb.db
+bin/crossbuild/DataSet/SQLiteModule/db/awbsync/ParameterDB_awbsync.db
+bin/crossbuild/DataSet/SQLiteModule/db/feature/ParameterDB_feature.db
+bin/crossbuild/DataSet/SQLiteModule/db/flash/ParameterDB_flash.db
+bin/crossbuild/DataSet/SQLiteModule/db/flashcali/ParameterDB_flashcali.db
+bin/crossbuild/DataSet/SQLiteModule/db/pd/ParameterDB_pd.db
+bin/crossbuild/DataSet/SQLiteModule/db/pipeline/ParameterDB_pipeline.db
+bin/crossbuild/DataSet/SQLiteModule/db/tone/ParameterDB_tone.db
