@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/mtk_plpath_utils:recovery/root/system/bin/mtk_plpath_utils \
     $(LOCAL_PATH)/prebuilts/mtk-plpath-utils.rc:recovery/root/system/etc/init/mtk-plpath-utils.rc
 
+# MTK InCallService
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
