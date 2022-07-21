@@ -186,6 +186,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
+    android.hardware.power-service-mediatek
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6 \
