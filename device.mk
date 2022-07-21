@@ -320,8 +320,8 @@ PRODUCT_CHARACTERISTICS := default
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor \
+    android.hardware.power-service-mediatek
 
 # RIL
 PRODUCT_PACKAGES += \
