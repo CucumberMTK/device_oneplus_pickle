@@ -80,6 +80,11 @@ PRODUCT_PACKAGES += \
     libclearkeycasplugin \
     android.hardware.cas@1.2-service-lazy
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.3-service \
+    libvulkan
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
