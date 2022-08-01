@@ -75,6 +75,11 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# CAS
+PRODUCT_PACKAGES += \
+    libclearkeycasplugin \
+    android.hardware.cas@1.2-service-lazy
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
