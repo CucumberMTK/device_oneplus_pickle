@@ -323,6 +323,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service-mediatek
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
