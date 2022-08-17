@@ -53,24 +53,39 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.common-util \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio@4.0-util \
-    android.hardware.audio@5.0-util \
-    android.hardware.audio@6.0-util \
-    android.hardware.audio@7.0-util \
-    android.hardware.audio.effect@4.0-util \
-    android.hardware.audio.effect@5.0-util \
+    android.hardware.audio.common@6.0-util \
+    android.hardware.audio.common@7.0-util \
     android.hardware.audio.effect@6.0-util \
-    android.hardware.audio.effect@7.0-util \
-    libaudio-resampler \
-    libaudioprocessing \
-    libaudiospdif
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio@7.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio_policy.stub \
+    libaudiopreprocessing \
+    libbundlewrapper \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libldnhncr \
+    libreverbwrapper \
+    libvisualizer \
+    libaudiofoundation.vendor \
+    libtinycompress
 
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0 \
     android.hardware.soundtrigger@2.1 \
     android.hardware.soundtrigger@2.2
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -81,9 +96,23 @@ PRODUCT_PACKAGES += \
     libclearkeycasplugin \
     android.hardware.cas@1.2-service-lazy
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6.vendor
+
 # Display
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.3-service \
+    libdrm.vendor \
     libvulkan
 
 # fastbootd
@@ -96,6 +125,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0.vendor
+
+# Gnss
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -130,7 +165,9 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.memory.block@1.0 \
     libhidltransport \
-    libhwbinder 
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -147,8 +184,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-oplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oplus.xml
 
 # LiveDisplay
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.1-service.oplus
+
+# Lights
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oplus
 
 # MTK plpath utils
 PRODUCT_COPY_FILES += \
@@ -165,8 +205,11 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor:64 \
     android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
-    android.hardware.vibrator-V1-ndk_platform.vendor:64 \
-    android.system.keystore2-V1-ndk_platform.vendor:64
+    android.hardware.vibrator-V2-ndk_platform.vendor:64 \
+    android.system.keystore2-V1-ndk_platform.vendor:64 \
+    android.hardware.light-V1-ndk_platform.vendor:64 \
+    android.hardware.biometrics.face-V1-ndk_platform.vendor:64
+
 
 # MTK InCallService
 PRODUCT_PACKAGES += \
@@ -204,11 +247,21 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Product characteristics
 PRODUCT_CHARACTERISTICS := default
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.2.vendor
+
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.2.vendor \
     android.hardware.radio@1.6 \
     android.hardware.radio.config@1.3 \
-    android.hardware.secure_element@1.2
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.1 \
+    android.hardware.secure_element@1.1.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -270,9 +323,13 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oplus
 
-# Vibrator
+# Thermal
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    android.hardware.thermal@2.0.vendor
+
+# Vibrator
+#PRODUCT_PACKAGES += \
+#    vendor.qti.hardware.vibrator.service.oplus
 
 # USB
 PRODUCT_PACKAGES += \
@@ -290,6 +347,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # VNDK
+PRODUCT_PACKAGES += \
+    libutils-v32
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Inherit the proprietary files
