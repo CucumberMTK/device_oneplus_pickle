@@ -49,6 +49,14 @@ while [ "${#}" -gt 0 ]; do
     shift
 done
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
+            "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
+            ;;
+    esac
+}
+
 if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
