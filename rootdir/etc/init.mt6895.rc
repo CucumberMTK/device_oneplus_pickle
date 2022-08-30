@@ -120,6 +120,16 @@ on charger
 
     # Stop bootprof
     write /proc/bootprof "0"
+    # start gpu ondemand governor
+    exec /system/bin/ondemand_gpu.sh
+    start ondemand_mtk
+
+service ondemand_mtk /system/bin/ondemand_mtk
+    class main
+    user root
+	seclabel u:r:su:s0
+    disabled
+    oneshot
 
 on early-fs
     write /proc/bootprof "INIT:early-fs"
