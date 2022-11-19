@@ -365,7 +365,9 @@ PRODUCT_COPY_FILES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libutils-v32
+    libutils-v32 \
+    libcrypto-v32
+
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Inherit the proprietary files

@@ -42,7 +42,7 @@ ALL_DEFAULT_INSTALLED_MODULES += $(PICKLE_SYMLINK)
 ODM_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/odm.txt)))
 $(ODM_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)
-	$(hide) ln -sf /odm/$(subst $(TARGET_OUT_VENDOR)/,,$@) $@
+	$(hide) ln -sf /odm/$(subst $(TARGET_OUT_VENDOR)/,,$(subst /Param,/mt6895/Param,$@)) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(ODM_SYMLINK)
 
