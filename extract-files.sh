@@ -57,6 +57,9 @@ function blob_fixup() {
         vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service | vendor/bin/hw/mt6895/camerahalserver | vendor/bin/hw/android.hardware.thermal@2.0-service.mtk)
             "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
             ;;
+        vendor/bin/mtk_agpsd)
+            "$PATCHELF" --replace-needed "libcrypto.so" "libcrypto-v32.so" "$2"
+            ;;
     esac
 }
 
