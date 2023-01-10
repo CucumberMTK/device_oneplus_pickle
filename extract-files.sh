@@ -54,7 +54,7 @@ function blob_fixup() {
 	lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
-        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
+        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service | vendor/bin/hw/mt6895/camerahalserver | vendor/bin/hw/android.hardware.thermal@2.0-service.mtk)
             "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
             ;;
     esac
