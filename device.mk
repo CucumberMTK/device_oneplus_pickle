@@ -100,4 +100,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/oplus/ossi/ossi-vendor.mk)
+$(call inherit-product, vendor/oplus/pickle/pickle-vendor.mk)

@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/oplus/ossi
+DEVICE_PATH := device/oplus/pickle
 
 # A/B
 AB_OTA_UPDATER := true
@@ -53,8 +53,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := ossi_defconfig
-TARGET_KERNEL_SOURCE := kernel/oplus/ossi
+TARGET_KERNEL_CONFIG := pickle_defconfig
+TARGET_KERNEL_SOURCE := kernel/oplus/pickle
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -106,4 +106,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/oplus/ossi/BoardConfigVendor.mk
+include vendor/oplus/pickle/BoardConfigVendor.mk
