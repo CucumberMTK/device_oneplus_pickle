@@ -196,6 +196,7 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     meta_init.vendor.rc \
     multi_init.rc \
+    ueventd.mtk.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6895:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6895
