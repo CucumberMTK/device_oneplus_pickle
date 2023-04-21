@@ -1,0 +1,14 @@
+allow init vendor_file:file mounton;
+
+# Allow init to mount vendor configs
+allow init vendor_configs_file:dir mounton;
+allow init vendor_configs_file:file mounton;
+
+# Allow init to mount vendor overlay
+allow init vendor_overlay_file:dir mounton;
+
+allow init oplus_block_device:lnk_file { relabelto };
+allow init oplus_block_device:blk_file { relabelto };
+
+# Allow init to write to sysfs_graphics
+#allow init sysfs_graphics:file w_file_perms;

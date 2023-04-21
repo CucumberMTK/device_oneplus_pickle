@@ -1,0 +1,10 @@
+/(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.lights-service\.mediatek u:object_r:hal_light_default_exec:s0
+
+
+/dev/block/sdc4                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplusreserve.*                                                         u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplusreserve.*                                                                  u:object_r:oplus_block_device:s0
+/dev/block/sdc7                                                                                                        u:object_r:oplus_block_device:s0
+/dev/block/platform/soc/11270000.ufshci/by-name/oplus_custom                                                           u:object_r:oplus_block_device:s0
+/dev/block/platform/bootdevice/by-name/oplus_custom                                                                    u:object_r:oplus_block_device:s0
+
