@@ -3,6 +3,10 @@
 # ADSP
 odm/lib64/libadsprpc.so
 
+# APNs
+etc/apns-conf.xml
+vendor/etc/vendor-apns-conf.xml
+
 # Audio
 vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
@@ -385,11 +389,6 @@ vendor/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-
-# Boot
-vendor/bin/hw/android.hardware.boot@1.2-service
-vendor/etc/init/android.hardware.boot@1.2-service.rc
-vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 
 # Camera
 vendor/lib/mt6895/gc02m1_mipi_raw_21143_IdxMgr.so
@@ -1390,25 +1389,13 @@ odm/etc/camera/settings_fdc.txt
 odm/etc/camera/settings_fdc_lite.txt
 odm/etc/camera/video_enhance.json
 
-# CAS
-vendor/bin/hw/android.hardware.cas@1.2-service-lazy
-vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
-
 # CDSP
 odm/lib64/libcdsprpc.so
 
 # Display
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
-vendor/bin/hw/android.hardware.graphics.composer@2.3-service
-vendor/bin/hw/android.hardware.graphics.composer@2.4-service
 vendor/bin/hw/android.hardware.memtrack-service.mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/lib/egl/mt6895/libGLES_mali.so
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_meow.so
@@ -1508,12 +1495,6 @@ vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
 # DRM
 odm/lib/liboemcrypto.so
 odm/lib64/liboemcrypto.so
-vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/mediacas/libclearkeycasplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
@@ -1553,8 +1534,6 @@ odm/lib64/libgf_hal_G7.so
 odm/lib64/libsl_fp_impl.so
 
 # Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 
@@ -1562,10 +1541,42 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
+# MTK-IMS
+bin/vtservice
+etc/init/init.vtservice.rc
+-framework/mediatek-common.jar
+-framework/mediatek-framework.jar
+-framework/mediatek-ims-base.jar
+-framework/mediatek-ims-common.jar
+framework/mediatek-ims-extension-plugin.jar
+-framework/mediatek-telecom-common.jar
+-framework/mediatek-telephony-base.jar
+-framework/mediatek-telephony-common.jar
+lib/libmtk_vt_wrapper.so
+lib/libmtkperf_client.so
+lib/libvcodec_cap.so
+lib/libvcodec_capenc.so
+lib/libsysenv_system.so
+lib64/libcomutils.so
+lib64/libimsma.so
+lib64/libimsma_adapt.so
+lib64/libimsma_rtp.so
+lib64/libimsma_socketwrapper.so
+lib64/libmtk_vt_service.so
+lib64/libmtk_vt_wrapper.so
+lib64/libmtkperf_client.so
+lib64/libsignal.so
+lib64/libsink.so
+lib64/libsource.so
+lib64/libvcodec_cap.so
+lib64/libvcodec_capenc.so
+lib64/libvt_avsync.so
+lib64/libsysenv_system.so
+-priv-app/ImsService/ImsService.apk
+-system_ext/priv-app/MtkCarrierConfig/MtkCarrierConfig.apk
+system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+-product/overlay/OplusCarrierConfig.apk
 
 # IR
 vendor/lib/hw/consumerir.default.so
@@ -1593,7 +1604,6 @@ vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
 vendor/lib/libformatter.so
 vendor/lib/libsfplugin_ccodec_utils.so
-vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libcodec2_hidl@1.1.so
 vendor/lib64/libcodec2_hidl@1.2.so
 vendor/lib64/libcodec2_hidl_plugin.so
@@ -1605,31 +1615,15 @@ vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libsfplugin_ccodec_utils.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 
 # Media (OMX)
-etc/seccomp_policy/mediacodec.policy
-lib/libdatasource.so
-lib/libdmabufheap.so
 lib/libged_sys.so
 lib/libgralloc_extra_sys.so
-lib/libmedia_codeclist.so
 lib/libsf_cpupolicy.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib/libstagefright_surface_utils.so
 lib/libstagefright_wfd_mtk.so
-lib64/libdatasource.so
-lib64/libdmabufheap.so
 lib64/libged_sys.so
 lib64/libgralloc_extra_sys.so
-lib64/libmedia_codeclist.so
 lib64/libsf_cpupolicy.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-lib64/libstagefright_surface_utils.so
 lib64/libstagefright_wfd_mtk.so
 system_ext/lib/libiatlasservice.so
 system_ext/lib/libstagefright_hdcp.so
@@ -1639,9 +1633,6 @@ system_ext/lib64/libiatlasservice.so
 system_ext/lib64/libstagefright_hdcp.so
 system_ext/lib64/vendor.oplus.hardware.hdcp@1.0.so
 system_ext/lib64/vendor.oplus.hardware.hdcp@1.1.so
-vendor/bin/hw/android.hardware.media.omx@1.0-service
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
-vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libstagefright_softomx_plugin.so
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
@@ -2956,14 +2947,8 @@ odm/firmware/aw8697_weather_wind_RTP_142_234Hz.bin
 odm/firmware/aw8697_weather_wind_RTP_142_237Hz.bin
 
 # Wi-Fi
-vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
@@ -2996,7 +2981,6 @@ odm/bin/hw/subsys_daemon
 odm/bin/hw/vendor-oplus-hardware-engineer@1.0-service
 odm/bin/hw/vendor-oplus-hardware-transmessage@1.0-service
 odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
 odm/bin/hw/vendor.oplus.hardware.cammidasservice@1.0-service
 odm/bin/hw/vendor.oplus.hardware.charger@1.0-service
@@ -3012,7 +2996,6 @@ odm/bin/hw/vendor.oplus.hardware.mtkmodemaci@1.0-service
 odm/bin/hw/vendor.oplus.hardware.nfc@1.0-service
 odm/bin/hw/vendor.oplus.hardware.olc@2.0-service
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
-odm/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service
 odm/bin/hw/vendor.oplus.hardware.performance@1.0-service
 odm/bin/hw/vendor.oplus.hardware.rpmh@2.0-service
 odm/bin/hw/vendor.oplus.hardware.stability.oplus_project@1.0-service
@@ -3056,12 +3039,10 @@ odm/etc/init/init.camera_update.rc
 odm/etc/init/init.oplus.reserve.rc
 odm/etc/init/init.touchDaemon.rc
 odm/etc/init/init.vendor.oplus.connectivity.rc
-odm/etc/init/ormsHalService-default.rc
 odm/etc/init/subsys_daemon.rc
 odm/etc/init/vendor-oplus-hardware-engineer@1.0-service.rc
 odm/etc/init/vendor-oplus-hardware-transmessage@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.charger@1.0-service.rc
@@ -3315,9 +3296,6 @@ odm/etc/nfc/st21nfc_fw.bin_st21h_fw_01_20
 odm/etc/nfc/st21nfc_fw7.bin_st21h
 odm/etc/nfc/st21nfc_fw7.bin_st21h_fw_01_20
 odm/etc/normalize/flags.prop
-odm/etc/orms/orms_core_config.xml
-odm/etc/orms/orms_permission_config.xml
-odm/etc/power_profile/power_monitor_config.xml
 odm/etc/power_profile/power_profile.xml
 odm/etc/rftoolkit/proj_cases.xml
 odm/etc/sensor/sensor_config.json
@@ -3348,14 +3326,11 @@ odm/etc/vintf/manifest/manifest_oplus_touch.xml
 odm/etc/vintf/manifest/manifest_sedsnfc_sn100t.xml
 odm/etc/vintf/manifest/manifest_transmessage.xml
 odm/etc/vintf/manifest/oplus_wifi_service_device.xml
-odm/etc/vintf/manifest/ormsHalService-default.xml
 odm/etc/vintf/manifest/vendor.oplus.hardware.hdcp@1.1-service.xml
 odm/etc/vintf/manifest/vendor.oplus.hardware.olc@2.0-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
 odm/etc/vintf/manifest/vibrator-default.xml
-odm/etc/vintf/manifest_dsds.xml
-odm/etc/vintf/manifest_ss.xml
 odm/etc/MNL_Config.xml
 odm/etc/aac_richtap.config
 odm/etc/boe_boe_nt37701a_cinema_eyeprotect_data.xml
@@ -3376,7 +3351,6 @@ odm/etc/irissoft_oplus21861_boe_nt37701a_fhd_dsi_cmd.xml
 odm/etc/irissoft_oplus21861_tianma_ili7838a_fhd_dsi_cmd.fw
 odm/etc/irissoft_oplus21861_tianma_ili7838a_fhd_dsi_cmd.xml
 odm/etc/libese-nxp.conf
-odm/etc/oplus.fstab
 odm/etc/power_stats_config.xml
 odm/etc/samsung2048_ana6705_samsung_eyeprotect_data.xml
 odm/etc/samsung2048_ana6705_samsung_srgb_eyeprotect_data.xml
@@ -3677,8 +3651,6 @@ odm/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.misc-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.mtkmodemaci-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.oplusSensor-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.orms-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.orms.ormsHalService-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.osense.client-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.performance-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.stability.oplus_project-V1.0-java.jar
@@ -3802,7 +3774,6 @@ odm/lib/libop-ai-beauty-body-detection.so
 odm/lib/libop-ai-beauty-faceretouch-cn.so
 odm/lib/liboplus_platform_hwi.so
 odm/lib/liboprec.so
-odm/lib/libormshalclient.so
 odm/lib/libosensehalclient.so
 odm/lib/libpn553_fw.so
 odm/lib/libpn557_fw.so
@@ -3861,9 +3832,6 @@ odm/lib/vendor.oplus.hardware.misc@1.0.so
 odm/lib/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib/vendor.oplus.hardware.olc@2.0.so
 odm/lib/vendor.oplus.hardware.oplusSensor@1.0.so
-odm/lib/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/lib/vendor.oplus.hardware.orms@1.0.so
-odm/lib/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
 odm/lib/vendor.oplus.hardware.osense.client@1.0.so
 odm/lib/vendor.oplus.hardware.performance@1.0.so
 odm/lib/vendor.oplus.hardware.radio-V1-ndk_platform.so
@@ -4055,7 +4023,6 @@ odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/liboplus_platform_hwi.so
 odm/lib64/liboplusblur_capture_api.so
 odm/lib64/liboprec.so
-odm/lib64/libormshalclient.so
 odm/lib64/libosensehalclient.so
 odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
@@ -4117,9 +4084,6 @@ odm/lib64/vendor.oplus.hardware.misc@1.0.so
 odm/lib64/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib64/vendor.oplus.hardware.olc@2.0.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
-odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/lib64/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 odm/lib64/vendor.oplus.hardware.performance@1.0.so
 odm/lib64/vendor.oplus.hardware.radio-V1-ndk_platform.so
@@ -4261,19 +4225,13 @@ vendor/bin/hw/vendor.trustonic.tee@1.1-service
 vendor/bin/hw/vtservice_hidl
 vendor/bin/mt6895/dumpfaultd.mt6895
 vendor/bin/mt6895/jpegtool
-vendor/bin/AgentTest
 vendor/bin/aee_aedv64_v2
-vendor/bin/aee_dumpstatev_v2
 vendor/bin/aeev_v2
-vendor/bin/applypatch
 vendor/bin/atci_service
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/bip_ap
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
-vendor/bin/bt_dump
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
@@ -4281,12 +4239,10 @@ vendor/bin/chipinfo
 vendor/bin/conninfra_loader
 vendor/bin/dconfig
 vendor/bin/dexecutor
-vendor/bin/dmabuf_dump
 vendor/bin/dmc_core
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
 vendor/bin/dtc_vendor
-vendor/bin/dumpsys
 vendor/bin/eara_io_service
 vendor/bin/em_hidl
 vendor/bin/factory
@@ -4303,7 +4259,6 @@ vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
 vendor/bin/meta_tst
 vendor/bin/mnld
-vendor/bin/mrdump_tool
 vendor/bin/mt6660_calibration
 vendor/bin/mtk_agpsd
 vendor/bin/mtk_pkm_service
@@ -4317,14 +4272,11 @@ vendor/bin/rt5512_calibration
 vendor/bin/rttv_v2
 vendor/bin/smartcharging
 vendor/bin/smartpa_nvtest
-vendor/bin/stp_dump3
 vendor/bin/thermal_core
 vendor/bin/thermal_intf
 vendor/bin/volte_clientapi_ua
 vendor/bin/volte_rcs_ua
 vendor/bin/vpud
-vendor/bin/wifi_dump
-vendor/bin/wifitest
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
@@ -4468,7 +4420,6 @@ vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/dmc_core.rc
@@ -4526,8 +4477,6 @@ vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/init/vendor.trustonic.soter@1.0-service.rc
 vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
-vendor/etc/init/vendor_flash_recovery.rc
-vendor/etc/init/vndservicemanager.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/init/wlan_assistant.rc
 vendor/etc/md/apncfg/202_01.conf
@@ -5298,10 +5247,6 @@ vendor/etc/md/plmn/TS25/7/50.txt
 vendor/etc/md/plmn/TS25/9/01.txt
 vendor/etc/nn/ot/neuron_detection.mdla3_0
 vendor/etc/nn/ot/neuron_tracking.mdla3_0
-vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
-vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
-vendor/etc/seccomp_policy/mediaextractor.policy
-vendor/etc/seccomp_policy/mediaswcodec.policy
 vendor/etc/security/cacerts/01419da9.0
 vendor/etc/security/cacerts/04f60c28.0
 vendor/etc/security/cacerts/0d69c7e1.0
@@ -5468,7 +5413,6 @@ vendor/etc/smartpa_param/rt_device.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
-vendor/etc/vintf/manifest/gnss-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/vintf/manifest/lights-mtk-default.xml
@@ -5480,7 +5424,6 @@ vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/manifest_soter.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
-vendor/etc/vintf/manifest/power-default.xml
 vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.oplus.hardware.wifi.supplicant.xml
 vendor/etc/voicecommand/training/ubmfile/keyword05/hhha/p2.3/p0
@@ -5621,14 +5564,10 @@ vendor/etc/ecc_list_OP20.xml
 vendor/etc/ecc_list_OP236.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/factory.ini
-vendor/etc/fstab.emmc
-vendor/etc/fstab.enableswap
-vendor/etc/fstab.mt6895
 vendor/etc/fstb.cfg
 vendor/etc/gbe.cfg
 vendor/etc/init.insmod.mt6895.cfg
 vendor/etc/meow.cfg
-vendor/etc/mkshrc
 vendor/etc/mpe.conf
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml

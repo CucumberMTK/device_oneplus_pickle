@@ -1,0 +1,39 @@
+<!--
+/* *****************************************************************************
+** File: manifest_oppo_dsds_eSE.xml
+** Copyright (C), 2019, Oppo Mobile Comm Corp., Ltd
+**
+** Description:
+**       manifest_dsds.xml+manifest_secure_element_dsds.xml
+**
+** Version: 1.0
+** Date created: 14:30:00, 2019/4/25
+** Author: baozhu@oppo.com
+** TAG: NW.SIM.1704058
+** ******************************* Revision History: ***************************
+**         <author>                <date>            <desc>
+**         Baozhu Yu               2019/4/25          create
+** *****************************************************************************
+*/
+-->
+<manifest version="1.0" type="device">
+    <!-- #ChangJian@TECH.NW.REG.2054403, 2019/05/25, add for Euclid -->
+    <hal format="hidl">
+        <name>vendor.oplus.hardware.appradio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOplusAppRadio</name>
+            <instance>oplus_app_slot1</instance>
+            <instance>oplus_app_slot2</instance>
+        </interface>
+    </hal>
+
+    <!-- #ChangJian@TECH.NW.REG.2054403, 2019/05/25, add for Euclid -->
+    <hal format="aidl">
+        <name>vendor.oplus.hardware.radio</name>
+        <version>1</version>
+        <fqname>IRadioStable/OplusRadio0</fqname>
+        <fqname>IRadioStable/OplusRadio1</fqname>
+    </hal>
+</manifest>

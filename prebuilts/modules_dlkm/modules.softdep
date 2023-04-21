@@ -1,0 +1,8 @@
+# Soft dependencies extracted from modules themselves.
+softdep uff_fp_driver pre:mtk_disp_notify
+softdep jiiov_mtk pre:oplus_fp_common
+softdep jiiov_mtk pre:mtk_disp_notify
+softdep jiiov_mtk pre:spi-mt65xx
+softdep sspm_v3 pre: tinysys-scmi.ko
+softdep mali_kbase_mt6895 pre: memory_group_manager
+softdep oplus_fp_common pre:oplus_bsp_tp_notify

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ossi.mk
+    $(LOCAL_DIR)/lineage_pickle.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ossi-user \
-    lineage_ossi-userdebug \
-    lineage_ossi-eng
+    lineage_pickle-user \
+    lineage_pickle-userdebug \
+    lineage_pickle-eng

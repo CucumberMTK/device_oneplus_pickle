@@ -5,6 +5,12 @@
 //
 
 // Init scripts
+
+sh_binary {
+    name: "set_permissive.sh",
+    src: "bin/set_permissive.sh"
+}
+
 sh_binary {
     name: "init.insmod.sh",
     src: "bin/init.insmod.sh",
@@ -174,7 +180,7 @@ prebuilt_etc {
 
 // fstab
 prebuilt_etc {
-    name: "fstab.emmc",
-    src: "etc/fstab.emmc",
+    name: "fstab.mt6895",
+    src: "etc/fstab.mt6895",
     vendor: true,
 }
