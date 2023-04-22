@@ -17,7 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 PRODUCT_PACKAGES += \
     bootctrl.default \
@@ -98,6 +98,15 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
+
+# FS tools
+ PRODUCT_PACKAGES += \
+    e2fsck \
+    e2fsck.recovery \
+    resize2fs \
+    resize2fs.recovery \
+    tune2fs \
+    tune2fs.recovery
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
