@@ -25,12 +25,26 @@ $(MDOTA_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MDOTA_SYMLINK)
 
+DB_SYMLINK := $(TARGET_OUT_VENDOR)/bin/crossbuild/DataSet/SQLiteModule/db/ParameterDB.db
+$(DB_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf /odm/bin/crossbuild/DataSet/SQLiteModule/db/mt6895/ParameterDB.db $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(DB_SYMLINK)
+
 PICKLE_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/pickle.txt)))
 $(PICKLE_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)
 	$(hide) ln -sf mt6895/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(PICKLE_SYMLINK)
+
+ODM_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/, $(strip $(shell cat $(DEVICE_PATH)/symlink/odm.txt)))
+$(ODM_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf /odm/$(subst $(TARGET_OUT_VENDOR)/,,$@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(ODM_SYMLINK)
 
 AUDIO_PRIMARY_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/audio.primary.mt6895.so
 AUDIO_PRIMARY_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/audio.primary.mt6895.so
