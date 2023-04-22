@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2023 The LineageOS Project
 #
@@ -167,6 +168,14 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResTarget \
+    OPlusFrameworksResCommon \
+    OPlusSettingsResCommon \
+    OPlusSystemUIResCommon \
+    WifiResTarget
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
