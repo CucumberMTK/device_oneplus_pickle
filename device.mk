@@ -117,8 +117,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-   android.hardware.biometrics.fingerprint@2.3-service.oplus
+#PRODUCT_PACKAGES += \
+#   android.hardware.biometrics.fingerprint@2.3-service.oplus
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
@@ -156,6 +156,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/mtk-plpath-utils.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/mtk-plpath-utils.rc \
     $(LOCAL_PATH)/prebuilts/mtk_plpath_utils:recovery/root/system/bin/mtk_plpath_utils \
     $(LOCAL_PATH)/prebuilts/mtk-plpath-utils.rc:recovery/root/system/etc/init/mtk-plpath-utils.rc
+
+# NDK Platform backend
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk_platform.vendor:64 \
+    android.hardware.memtrack-V1-ndk_platform.vendor:64 \
+    android.hardware.power-V2-ndk_platform.vendor:64 \
+    android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor:64 \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
+    android.hardware.vibrator-V1-ndk_platform.vendor:64 \
+    android.system.keystore2-V1-ndk_platform.vendor:64
 
 # MTK InCallService
 PRODUCT_PACKAGES += \
@@ -232,6 +243,10 @@ PRODUCT_PACKAGES += \
     ueventd.mtk.rc
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.emmc \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6895:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.mt6895
+
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6895:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6895
 
 PRODUCT_COPY_FILES += \
@@ -273,6 +288,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oneplus/pickle/pickle-vendor.mk)

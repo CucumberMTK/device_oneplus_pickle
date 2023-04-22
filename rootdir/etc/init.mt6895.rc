@@ -16,6 +16,7 @@ import ${ro.vendor.rc}init.modem.rc
 # *** DO NOT import the new rc file after this line ***
 
 on early-init
+    start set_permissive
     write /proc/bootprof "INIT:early-init"
 
     # initialize vendor.all.modules.ready to 1 here to prevent NOT GKI project blocked
@@ -36,6 +37,7 @@ on early-init && property:ro.build.type=userdebug
     setprop persist.dbg.keep_debugfs_mounted true
 
 on init
+    mount none /vendor/lost+found /vendor/overlay bind
     write /proc/bootprof "INIT:init"
 
     # Support legacy paths
@@ -149,6 +151,9 @@ on fs
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
     write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
+
+    rm /cache/boot_lc_main.txt
+    start boot_lc_main
 
 #ifdef OPLUS_FEATURE_PHOENIX
 #Martin.li@Stability,2021/5/26 fix system process have no access to /mnt/vendor
@@ -1140,6 +1145,9 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
     start loghidlvendorservice
     start loghidlsysservice
 
+on property:sys.boot_completed=1
+    stop boot_lc_main
+
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
@@ -1182,3 +1190,16 @@ service fuelgauged_nvram /vendor/bin/fuelgauged_nvram
 
 on property:sys.oplus.vm.swaplow=*
     exec_background /system/bin/lmkd --update swaplow ${sys.oplus.vm.swaplow}
+
+service boot_lc_main /system/bin/logcat -f /mnt/vendor/oplusreserve/boot_lc_main.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service set_permissive /system/bin/set_permissive.sh
+    class main
+    user root
+    seclabel u:r:su:s0
+    disabled
