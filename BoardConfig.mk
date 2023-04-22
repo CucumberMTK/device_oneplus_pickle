@@ -205,7 +205,8 @@ BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_FILES += \
     $(DEVICE_PATH)/manifest_ss.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.device.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.device.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 
 # Inherit the proprietary files
 include vendor/oneplus/pickle/BoardConfigVendor.mk
