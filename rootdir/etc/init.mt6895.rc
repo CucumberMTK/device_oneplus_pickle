@@ -37,7 +37,6 @@ on early-init && property:ro.build.type=userdebug
     setprop persist.dbg.keep_debugfs_mounted true
 
 on init
-    mount none /vendor/lost+found /vendor/overlay bind
     write /proc/bootprof "INIT:init"
 
     # Support legacy paths

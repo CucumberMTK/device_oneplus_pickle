@@ -1541,6 +1541,8 @@ vendor/lib64/libTEECommon.so
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
+vendor/etc/vintf/manifest/gnss-default.xml
 
 # MTK-IMS
 -framework/mediatek-common.jar
@@ -2952,8 +2954,14 @@ odm/firmware/aw8697_weather_wind_RTP_142_234Hz.bin
 odm/firmware/aw8697_weather_wind_RTP_142_237Hz.bin
 
 # Wi-Fi
+vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
+vendor/etc/init/android.hardware.wifi.supplicant-service.rc
+vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
+vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
+vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
+vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
 vendor/lib64/libkeystore-wifi-hidl.so
@@ -3358,6 +3366,7 @@ odm/etc/irissoft_oplus21861_boe_nt37701a_fhd_dsi_cmd.xml
 odm/etc/irissoft_oplus21861_tianma_ili7838a_fhd_dsi_cmd.fw
 odm/etc/irissoft_oplus21861_tianma_ili7838a_fhd_dsi_cmd.xml
 odm/etc/libese-nxp.conf
+odm/etc/oplus.fstab
 odm/etc/power_stats_config.xml
 odm/etc/samsung2048_ana6705_samsung_eyeprotect_data.xml
 odm/etc/samsung2048_ana6705_samsung_srgb_eyeprotect_data.xml
@@ -4239,13 +4248,17 @@ vendor/bin/hw/vendor.trustonic.soter@1.0-service
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
 vendor/bin/mt6895/dumpfaultd.mt6895
 vendor/bin/mt6895/jpegtool
+vendor/bin/AgentTest
 vendor/bin/aee_aedv64_v2
+vendor/bin/aee_dumpstatev_v2
 vendor/bin/aeev_v2
+vendor/bin/applypatch
 vendor/bin/atci_service
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/bip_ap
+vendor/bin/bt_dump
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
@@ -4253,10 +4266,12 @@ vendor/bin/chipinfo
 vendor/bin/conninfra_loader
 vendor/bin/dconfig
 vendor/bin/dexecutor
+vendor/bin/dmabuf_dump
 vendor/bin/dmc_core
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
 vendor/bin/dtc_vendor
+vendor/bin/dumpsys
 vendor/bin/eara_io_service
 vendor/bin/em_hidl
 vendor/bin/factory
@@ -4273,7 +4288,9 @@ vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
 vendor/bin/meta_tst
 vendor/bin/mnld
+vendor/bin/mrdump_tool
 vendor/bin/mt6660_calibration
+vendor/bin/mtk_agpsd
 vendor/bin/mtk_pkm_service
 vendor/bin/mtk_plpath_utils_ota
 vendor/bin/muxreport
@@ -4290,6 +4307,8 @@ vendor/bin/thermal_intf
 vendor/bin/volte_clientapi_ua
 vendor/bin/volte_rcs_ua
 vendor/bin/vpud
+vendor/bin/wifi_dump
+vendor/bin/wifitest
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
@@ -4458,6 +4477,7 @@ vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.gps_pwr.rc
 vendor/etc/init/init.gps_scp.rc
 vendor/etc/init/init.thermal_core.rc
+vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
@@ -5436,6 +5456,7 @@ vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/manifest_soter.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
+vendor/etc/vintf/manifest/power-default.xml
 vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.oplus.hardware.wifi.supplicant.xml
 vendor/etc/voicecommand/training/ubmfile/keyword05/hhha/p2.3/p0
@@ -6306,6 +6327,17 @@ vendor/res/images/lcd_test_02.png
 vendor/res/sound/CalibrationPatternOut.wav
 vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
+
+# Missing
+vendor/lib/hw/gatekeeper.trustonic.so
+vendor/lib/hw/kmsetkey.default.so
+vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-mtkimpl.so
+vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
+vendor/lib64/hw/gatekeeper.trustonic.so
+vendor/lib64/hw/kmsetkey.default.so
 
 # Fixup
 vendor/bin/mtk_agpsd

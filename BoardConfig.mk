@@ -54,7 +54,7 @@ TARGET_USES_UEFI := true
 TARGET_NO_BOOTLOADER := true
 
 # Display
-TARGET_SCREEN_DENSITY := 394
+TARGET_SCREEN_DENSITY := 370
 
 # Fingerprint
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
