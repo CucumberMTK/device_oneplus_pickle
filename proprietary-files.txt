@@ -1543,8 +1543,6 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 
 # MTK-IMS
-bin/vtservice
-etc/init/init.vtservice.rc
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
 -framework/mediatek-ims-base.jar
@@ -4239,7 +4237,6 @@ vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.trustonic.soter@1.0-service
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
-vendor/bin/hw/vtservice_hidl
 vendor/bin/mt6895/dumpfaultd.mt6895
 vendor/bin/mt6895/jpegtool
 vendor/bin/aee_aedv64_v2
@@ -4461,7 +4458,6 @@ vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.gps_pwr.rc
 vendor/etc/init/init.gps_scp.rc
 vendor/etc/init/init.thermal_core.rc
-vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
