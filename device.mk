@@ -59,6 +59,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio@6.0-impl \
     android.hardware.audio@7.0-impl \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio@7.0.vendor \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
@@ -83,6 +85,9 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1 \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.audio@2.1-impl
@@ -104,6 +109,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.6 \
     android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor
@@ -128,6 +136,7 @@ PRODUCT_PACKAGES += \
 
 # Gnss
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor
@@ -167,7 +176,8 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    vndservicemanager
 
 # IMS
 PRODUCT_BOOT_JARS += \
@@ -210,8 +220,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
     android.hardware.vibrator-V2-ndk_platform.vendor:64 \
     android.system.keystore2-V1-ndk_platform.vendor:64 \
-    android.hardware.light-V1-ndk_platform.vendor:64 \
-    android.hardware.biometrics.face-V1-ndk_platform.vendor:64
+    android.hardware.light-V1-ndk_platform.vendor:64
 
 
 # MTK InCallService
@@ -264,6 +273,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio@1.2.vendor \
     android.hardware.radio@1.6 \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3 \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
