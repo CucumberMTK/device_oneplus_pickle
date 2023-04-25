@@ -51,6 +51,11 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Audio Configs
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
+
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common@6.0-util \
@@ -85,12 +90,10 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1 \
-    android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth.audio@2.1-impl
+    android.hardware.bluetooth.audio-impl
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -121,7 +124,8 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.3-service \
     libdrm.vendor \
-    libvulkan
+    libvulkan \
+    disable_configstore
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -237,7 +241,7 @@ PRODUCT_PACKAGES += \
     Tag
 
 # Overlays
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
+#$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -270,7 +274,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
@@ -380,8 +383,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal \
-    sensors.oplus
+    android.hardware.sensors@2.0-service.multihal
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
@@ -392,8 +394,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/oplus
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.oplus
 
 # Thermal
 PRODUCT_PACKAGES += \

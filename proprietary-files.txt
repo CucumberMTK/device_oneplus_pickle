@@ -379,14 +379,8 @@ vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 
 # Bluetooth (A2DP)
-vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
-vendor/lib/hw/android.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib/hw/audio.bluetooth.default.so
 vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 
@@ -1495,12 +1489,10 @@ vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
 # DRM
 odm/lib/liboemcrypto.so
 odm/lib64/liboemcrypto.so
-vendor/lib/mediacas/libclearkeycasplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
-vendor/lib64/mediacas/libclearkeycasplugin.so
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/mediadrm/libwvdrmengine.so
@@ -1781,10 +1773,6 @@ vendor/etc/thermal/thermal_policy_09.conf
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
-
-# Vibrator
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
 
 # Vibrator firmware
 odm/firmware/aw8697_ALCloudscape_94_165HZ.bin
@@ -3002,7 +2990,6 @@ odm/bin/hw/vendor.oplus.hardware.felica@1.0-service
 odm/bin/hw/vendor.oplus.hardware.fido.fidoca@1.0-service
 odm/bin/hw/vendor.oplus.hardware.gameopt@1.0-service
 odm/bin/hw/vendor.oplus.hardware.hdcp@1.1-service
-odm/bin/hw/vendor.oplus.hardware.lmvibrator@1.0-service
 odm/bin/hw/vendor.oplus.hardware.misc@1.0-service
 odm/bin/hw/vendor.oplus.hardware.mtkmodemaci@1.0-service
 odm/bin/hw/vendor.oplus.hardware.nfc@1.0-service
@@ -3065,7 +3052,6 @@ odm/etc/init/vendor.oplus.hardware.felica@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.gameopt@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.hdcp@1.1-service.rc
-odm/etc/init/vendor.oplus.hardware.lmvibrator@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.misc@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.mtkmodemaci@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.nfc@1.0-service.rc
@@ -3329,7 +3315,6 @@ odm/etc/vintf/manifest/manifest_oplus_fido.xml
 odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/etc/vintf/manifest/manifest_oplus_gameopt.xml
 odm/etc/vintf/manifest/manifest_oplus_ifaa.xml
-odm/etc/vintf/manifest/manifest_oplus_lmvibrator.xml
 odm/etc/vintf/manifest/manifest_oplus_misc.xml
 odm/etc/vintf/manifest/manifest_oplus_mtkmodemaci.xml
 odm/etc/vintf/manifest/manifest_oplus_nfc.xml
@@ -3663,7 +3648,6 @@ odm/framework/vendor.oplus.hardware.felica-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.fido.fidoca-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.gameopt-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.ims-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.misc-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.mtkmodemaci-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.oplusSensor-V1.0-java.jar
@@ -3846,7 +3830,6 @@ odm/lib/vendor.oplus.hardware.gameopt@1.0.so
 odm/lib/vendor.oplus.hardware.hdcp@1.0.so
 odm/lib/vendor.oplus.hardware.hdcp@1.1.so
 odm/lib/vendor.oplus.hardware.ims@1.0.so
-odm/lib/vendor.oplus.hardware.lmvibrator@1.0.so
 odm/lib/vendor.oplus.hardware.misc@1.0.so
 odm/lib/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib/vendor.oplus.hardware.olc@2.0.so
@@ -4102,7 +4085,6 @@ odm/lib64/vendor.oplus.hardware.gameopt@1.0.so
 odm/lib64/vendor.oplus.hardware.hdcp@1.0.so
 odm/lib64/vendor.oplus.hardware.hdcp@1.1.so
 odm/lib64/vendor.oplus.hardware.ims@1.0.so
-odm/lib64/vendor.oplus.hardware.lmvibrator@1.0.so
 odm/lib64/vendor.oplus.hardware.misc@1.0.so
 odm/lib64/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib64/vendor.oplus.hardware.olc@2.0.so
@@ -6345,3 +6327,21 @@ vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 lib64/libsink.so
 vendor/bin/hw/mt6895/camerahalserver
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
+
+# Vibrator
+system_ext/bin/hapticscreencap
+system_ext/etc/init/hapticscreencap.rc
+system/lib/android.hardware.vibrator@1.2.so
+system/lib/android.hardware.vibrator@1.3.so
+system/lib/android.hardware.vibrator@1.1.so
+system/lib/android.hardware.vibrator@1.0.so
+system/lib/android.hardware.vibrator-V2-cpp.so
+system/lib/libvibrator.so
+system/lib/libvibratorservice.so
+system/lib64/libvibratorservice.so
+system/lib64/libvibrator.so
+system/lib64/android.hardware.vibrator@1.3.so
+system/lib64/android.hardware.vibrator@1.2.so
+system/lib64/android.hardware.vibrator@1.1.so
+system/lib64/android.hardware.vibrator@1.0.so
+system/lib64/android.hardware.vibrator-V2-cpp.so

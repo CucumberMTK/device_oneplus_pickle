@@ -48,6 +48,10 @@ TARGET_USES_64_BIT_BINDER := true
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# Audio
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_USES_ALSA_AUDIO := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := k6895v1_64
 TARGET_USES_UEFI := true
@@ -57,7 +61,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 370
 
 # Fingerprint
-TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
+#TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 4
