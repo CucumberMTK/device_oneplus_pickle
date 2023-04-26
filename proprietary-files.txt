@@ -5192,6 +5192,7 @@ vendor/etc/multimedia_app_scale_list.xml
 vendor/etc/multimedia_display_feature_config.xml
 vendor/etc/multimedia_display_perf_list.xml
 vendor/etc/multimedia_pixelworks_game_apps.xml
+vendor/etc/vibrator/effect2waveform.xml
 vendor/lib/libAPSClient-cmd-jni.so
 vendor/lib/libAPSClient-jni.so
 vendor/lib/libcolorx-loader.so
