@@ -389,6 +389,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Soong namespaces
+BOARD_HAS_MTK_HARDWARE := true
+
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oplus
@@ -403,7 +405,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 #PRODUCT_PACKAGES += \
-#    vendor.qti.hardware.vibrator.service.oplus
+#    android.hardware.vibrator-service.mediatek
 
 # USB
 PRODUCT_PACKAGES += \

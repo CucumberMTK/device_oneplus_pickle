@@ -2199,6 +2199,7 @@ odm/etc/tianma_tianma_ili7838a_eyeprotect_data.xml
 odm/etc/tianma_tianma_ili7838a_srgb_eyeprotect_data.xml
 odm/etc/tm_nt37701_2048_tm_nt37701_42_eyeprotect_data.xml
 odm/etc/tm_nt37701_2048_tm_nt37701_42_srgb_eyeprotect_data.xml
+odm/etc/ueventd.rc
 odm/etc/ueventd.reserve.rc
 odm/etc/ueventd.wifi.rc
 odm/etc/vendor_wifi_rus_config.xml

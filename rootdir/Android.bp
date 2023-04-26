@@ -185,6 +185,12 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "ueventd.oplus.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.oplus.rc",
+}
+
 // fstab
 prebuilt_etc {
     name: "fstab.mt6895",
