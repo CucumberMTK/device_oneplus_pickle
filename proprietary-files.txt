@@ -1668,8 +1668,6 @@ odm/etc/libnfc-nci.conf
 odm/bin/hw/android.hardware.power.stats-impl.oplus
 odm/etc/init/android.hardware.power.stats-service.oplus.rc
 odm/etc/vintf/manifest/android.hardware.power.stats-service.oplus.xml
-vendor/lib/hw/power.default.so
-vendor/lib64/hw/power.default.so
 
 # Radio
 system_ext/etc/init/datafree.rc
