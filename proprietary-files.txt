@@ -3810,7 +3810,6 @@ odm/lib/libwvhdcpext.so
 odm/lib/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 odm/lib/vendor.mediatek.hardware.camera.isphal@1.0.so
 odm/lib/vendor.oplus.hardware.appradio@1.0.so
-odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
 odm/lib/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so
 odm/lib/vendor.oplus.hardware.cammidasservice@1.0.so
@@ -4066,7 +4065,6 @@ odm/lib64/libwvhdcpext.so
 odm/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 odm/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
-odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
 odm/lib64/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
@@ -6312,6 +6310,10 @@ vendor/res/sound/testpattern1.wav
 # Missing
 vendor/lib/hw/gatekeeper.trustonic.so
 vendor/lib/hw/kmsetkey.default.so
+vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+vendor/lib/hw/android.hardware.boot@1.0-impl-1.2-mtkimpl.so
 vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
