@@ -414,8 +414,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor
 
 # Vibrator
-#PRODUCT_PACKAGES += \
-#    android.hardware.vibrator-service.mediatek
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
 
 # USB
 PRODUCT_PACKAGES += \

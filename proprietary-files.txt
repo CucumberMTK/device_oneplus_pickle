@@ -95,11 +95,9 @@ odm/lib64/soundfx/libdiraceffect.so
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib/soundfx/libdynproc.so
 vendor/lib/soundfx/libhapticgenerator.so
-vendor/lib/libvibrator.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/libvibrator.so
 
 # Audio configs
 etc/audio_effects.conf
@@ -1771,10 +1769,6 @@ vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
-# Vibrator
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
-
 # Vibrator firmware
 vendor/firmware/aw8697_ALCloudscape_94_165HZ.bin
 vendor/firmware/aw8697_ALCloudscape_94_170HZ.bin
@@ -3002,7 +2996,6 @@ odm/bin/hw/vendor.oplus.hardware.performance@1.0-service
 odm/bin/hw/vendor.oplus.hardware.rpmh@2.0-service
 odm/bin/hw/vendor.oplus.hardware.stability.oplus_project@1.0-service
 odm/bin/hw/vendor.oplus.hardware.touch@1.0-service
-odm/bin/hw/vendor.oplus.hardware.vibrator-service
 odm/bin/hw/vendor.oplus.hardware.wifi@1.1-service
 odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
 odm/bin/irisConfig
@@ -6339,20 +6332,6 @@ vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 # Vibrator
 system_ext/bin/hapticscreencap
 system_ext/etc/init/hapticscreencap.rc
-system/lib/android.hardware.vibrator@1.2.so
-system/lib/android.hardware.vibrator@1.3.so
-system/lib/android.hardware.vibrator@1.1.so
-system/lib/android.hardware.vibrator@1.0.so
-system/lib/android.hardware.vibrator-V2-cpp.so
-system/lib/libvibrator.so
-system/lib/libvibratorservice.so
-system/lib64/libvibratorservice.so
-system/lib64/libvibrator.so
-system/lib64/android.hardware.vibrator@1.3.so
-system/lib64/android.hardware.vibrator@1.2.so
-system/lib64/android.hardware.vibrator@1.1.so
-system/lib64/android.hardware.vibrator@1.0.so
-system/lib64/android.hardware.vibrator-V2-cpp.so
 
 # My_product
 vendor/etc/cust_silky_brightness_boe.xml
