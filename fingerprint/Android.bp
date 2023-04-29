@@ -14,11 +14,11 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.RMX3031",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.pickle",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.RMX3031.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.pickle.rc"],
     relative_install_path: "hw",
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.RMX3031.xml"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.pickle.xml"],
     srcs: [
         "BiometricsFingerprint.cpp",
         "service.cpp",
@@ -42,7 +42,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libudfps_extension.RMX3031",
+    name: "libudfps_extension.pickle",
     srcs: ["UdfpsExtension.cpp"],
     include_dirs: [
         "frameworks/native/services/surfaceflinger/CompositionEngine/include"

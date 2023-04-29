@@ -1495,6 +1495,11 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/lib/anc.hal.so
+odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
+odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib/hw/fingerprint.goodix_G2.default.so
 odm/lib/hw/fingerprint.goodix_G3.default.so
 odm/lib/hw/fingerprint.goodix_G5.default.so
@@ -1507,7 +1512,7 @@ odm/lib/libgf_hal_G5.so
 odm/lib/libgf_hal_G6.so
 odm/lib/libgf_hal_G7.so
 odm/lib/libsl_fp_impl.so
-odm/lib64/hw/fingerprint.focaltech.default.so
+odm/init.oplus.fingerprints.rc
 odm/lib64/hw/fingerprint.goodix_G2.default.so
 odm/lib64/hw/fingerprint.goodix_G3.default.so
 odm/lib64/hw/fingerprint.goodix_G5.default.so
@@ -3646,7 +3651,6 @@ odm/framework/vendor.oplus.hardware.mtkmodemaci-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.oplusSensor-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.orms-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.orms.ormsHalService-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.osense.client-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.performance-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.stability.oplus_project-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.touch-V1.0-java.jar
@@ -3656,7 +3660,6 @@ odm/lib/hw/audio.binaural_record.default.so
 odm/lib/hw/vendor.oplus.hardware.bluetooth_audio_extend@2.1-impl.so
 odm/lib/hw/vendor.oplus.hardware.gameopt@1.0-impl.so
 odm/lib/anc.capacitive.hal.so
-odm/lib/anc.hal.so
 odm/lib/lib2DSlender.so
 odm/lib/libAlgoInterface.so
 odm/lib/libAlgoProcess.so
@@ -3844,8 +3847,6 @@ odm/lib/vendor.pixelworks.hardware.display@1.0.so
 odm/lib/vendor.pixelworks.hardware.display@1.1.so
 odm/lib/vendor.pixelworks.hardware.feature@1.0.so
 odm/lib64/hw/audio.binaural_record.default.so
-odm/lib64/hw/fpsensor_fingerprint.default.so
-odm/lib64/hw/sidefp_fingerprint.default.so
 odm/lib64/hw/vendor.oplus.hardware.bluetooth_audio_extend@2.1-impl.so
 odm/lib64/hw/vendor.oplus.hardware.gameopt@1.0-impl.so
 odm/lib64/WideDistortionParams.bin
@@ -4109,7 +4110,6 @@ odm/vendor/app/mcRegistry/09080000000000000000000000000000.tlbin
 odm/vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin
 odm/vendor/app/mcRegistry/b230723bcfe75f8581122dc1f8e52f4d.tabin
 odm/init.oplus.face.rc
-odm/init.oplus.fingerprints.rc
 odm/init.oplus.seccommon.rc
 odm/vendor.aac.hardware.richtap.vibrator-timestamp
 odm/vendor.oplus.hardware.vibrator-timestamp
@@ -6301,6 +6301,12 @@ vendor/res/images/lcd_test_02.png
 vendor/res/sound/CalibrationPatternOut.wav
 vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
+
+# Osense
+system_ext/lib/vendor.oplus.hardware.osense.client@1.0.so
+system_ext/lib64/vendor.oplus.hardware.osense.client@1.0.so
+vendor/lib/vendor.oplus.hardware.osense.client@1.0.so
+vendor/lib64/vendor.oplus.hardware.osense.client@1.0.so
 
 # Missing
 vendor/lib/hw/gatekeeper.trustonic.so

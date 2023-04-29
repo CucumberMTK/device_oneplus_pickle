@@ -57,7 +57,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 370
 
 # UDFPS
-TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.RMX3031
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.pickle
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 4
@@ -207,8 +207,10 @@ BOARD_AVB_BOOT_ROLLBACK_INDEX_LOCATION := 3
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 ODM_MANIFEST_FILES += \
     $(DEVICE_PATH)/manifest_ss.xml
+
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.device.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
