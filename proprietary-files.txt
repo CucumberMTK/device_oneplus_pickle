@@ -45,7 +45,6 @@ vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib/vendor.oplus.hardware.olc@2.0.so
 vendor/lib/vendor.oplus.hardware.performance@1.0.so
 vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
@@ -83,7 +82,6 @@ vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib64/vendor.oplus.hardware.olc@2.0.so
 vendor/lib64/vendor.oplus.hardware.performance@1.0.so
 
@@ -805,8 +803,6 @@ vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
-vendor/lib64/vendor.mediatek.hardware.power@1.1.so
-vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.oplus.hardware.cameraextension@1.0.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
@@ -1498,6 +1494,7 @@ vendor/lib64/libwvhidl.so
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/lib/anc.hal.so
+odm/lib/anc.capacitive.hal.so
 odm/lib/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib/hw/fingerprint.goodix_G2.default.so
@@ -1525,6 +1522,20 @@ odm/lib64/libgf_hal_G5.so
 odm/lib64/libgf_hal_G6.so
 odm/lib64/libgf_hal_G7.so
 odm/lib64/libsl_fp_impl.so
+odm/lib64/anc.capacitive.hal.so
+odm/lib64/anc.hal.so
+odm/lib/android.hardware.biometrics.fingerprint@2.1.so
+odm/lib/android.hardware.biometrics.fingerprint@2.2.so
+odm/lib/android.hardware.biometrics.fingerprint@2.3.so
+odm/lib64/android.hardware.biometrics.fingerprint@2.1.so
+odm/lib64/android.hardware.biometrics.fingerprint@2.2.so
+odm/lib64/android.hardware.biometrics.fingerprint@2.3.so
+odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
+odm/lib64/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
+odm/lib/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
+odm/framework/vendor.oplus.hardware.biometrics.fingerprintpay-V1.0-java.jar
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc
 
 # Gatekeeper
 vendor/lib/libTEECommon.so
@@ -1670,9 +1681,28 @@ odm/lib64/vendor.nxp.hardware.nfc@2.0.so
 odm/etc/libnfc-nci.conf
 
 # Power
-odm/bin/hw/android.hardware.power.stats-impl.oplus
-odm/etc/init/android.hardware.power.stats-service.oplus.rc
-odm/etc/vintf/manifest/android.hardware.power.stats-service.oplus.xml
+-vendor/lib/libpowerhal.so
+-vendor/lib64/libpowerhal.so
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so
+vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so
+vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
+vendor/lib64/vendor.mediatek.hardware.power@1.1.so
+vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+vendor/lib/hw/power.default.so
+vendor/lib64/hw/power.default.so
+vendor/lib/libpowerhalwrap_vendor.so
+vendor/lib/libpower_timer.so
+vendor/lib64/libpowerhalwrap_vendor.so
+vendor/lib64/libpower_timer.so
+vendor/etc/vintf/manifest/power-default.xml
 
 # Radio
 system_ext/etc/init/datafree.rc
@@ -2975,7 +3005,6 @@ odm/bin/crossbuild/DataSet/SQLiteModule/db/tone/mt6895/ParameterDB_tone.db
 odm/bin/hw/subsys_daemon
 odm/bin/hw/vendor-oplus-hardware-engineer@1.0-service
 odm/bin/hw/vendor-oplus-hardware-transmessage@1.0-service
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
 odm/bin/hw/vendor.oplus.hardware.cammidasservice@1.0-service
 odm/bin/hw/vendor.oplus.hardware.charger@1.0-service
 odm/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
@@ -2990,7 +3019,6 @@ odm/bin/hw/vendor.oplus.hardware.mtkmodemaci@1.0-service
 odm/bin/hw/vendor.oplus.hardware.nfc@1.0-service
 odm/bin/hw/vendor.oplus.hardware.olc@2.0-service
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
-odm/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service
 odm/bin/hw/vendor.oplus.hardware.performance@1.0-service
 odm/bin/hw/vendor.oplus.hardware.rpmh@2.0-service
 odm/bin/hw/vendor.oplus.hardware.stability.oplus_project@1.0-service
@@ -3033,11 +3061,9 @@ odm/etc/init/init.camera_update.rc
 odm/etc/init/init.oplus.reserve.rc
 odm/etc/init/init.touchDaemon.rc
 odm/etc/init/init.vendor.oplus.connectivity.rc
-odm/etc/init/ormsHalService-default.rc
 odm/etc/init/subsys_daemon.rc
 odm/etc/init/vendor-oplus-hardware-engineer@1.0-service.rc
 odm/etc/init/vendor-oplus-hardware-transmessage@1.0-service.rc
-odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.charger@1.0-service.rc
 odm/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc
@@ -3290,7 +3316,6 @@ odm/etc/nfc/st21nfc_fw.bin_st21h_fw_01_20
 odm/etc/nfc/st21nfc_fw7.bin_st21h
 odm/etc/nfc/st21nfc_fw7.bin_st21h_fw_01_20
 odm/etc/normalize/flags.prop
-odm/etc/orms/orms_permission_config.xml
 odm/etc/power_profile/power_profile.xml
 odm/etc/rftoolkit/proj_cases.xml
 odm/etc/sensor/sensor_config.json
@@ -3307,7 +3332,6 @@ odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature.xml
 odm/etc/vintf/manifest/manifest_oplus_face.xml
 odm/etc/vintf/manifest/manifest_oplus_felica.xml
 odm/etc/vintf/manifest/manifest_oplus_fido.xml
-odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/etc/vintf/manifest/manifest_oplus_gameopt.xml
 odm/etc/vintf/manifest/manifest_oplus_ifaa.xml
 odm/etc/vintf/manifest/manifest_oplus_lmvibrator.xml
@@ -3321,7 +3345,6 @@ odm/etc/vintf/manifest/manifest_oplus_touch.xml
 odm/etc/vintf/manifest/manifest_sedsnfc_sn100t.xml
 odm/etc/vintf/manifest/manifest_transmessage.xml
 odm/etc/vintf/manifest/oplus_wifi_service_device.xml
-odm/etc/vintf/manifest/ormsHalService-default.xml
 odm/etc/vintf/manifest/vendor.oplus.hardware.hdcp@1.1-service.xml
 odm/etc/vintf/manifest/vendor.oplus.hardware.olc@2.0-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
@@ -3637,7 +3660,6 @@ odm/firmware/t-jingle_RTP_231.bin
 odm/firmware/tfa98xx.cnt
 odm/firmware/wentai24k_rtp_295.bin
 odm/framework/vendor.oplus.hardware.appradio-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.biometrics.fingerprintpay-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.charger-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.cryptoeng-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.engineer-V1.0-java.jar
@@ -3649,8 +3671,6 @@ odm/framework/vendor.oplus.hardware.lmvibrator-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.misc-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.mtkmodemaci-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.oplusSensor-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.orms-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.orms.ormsHalService-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.performance-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.stability.oplus_project-V1.0-java.jar
 odm/framework/vendor.oplus.hardware.touch-V1.0-java.jar
@@ -3699,7 +3719,6 @@ odm/lib/libYTCommon.so
 odm/lib/lib_aurisys_lvacfs.so
 odm/lib/lib_aurisys_lvimfs.so
 odm/lib/lib_aurisys_oprec.so
-odm/lib/libormshalclient.so
 odm/lib/lib_cryptoeng_api.so
 odm/lib/lib_lvacfs.so
 odm/lib/lib_rectify.so
@@ -3809,7 +3828,6 @@ odm/lib/libwvhdcpext.so
 odm/lib/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 odm/lib/vendor.mediatek.hardware.camera.isphal@1.0.so
 odm/lib/vendor.oplus.hardware.appradio@1.0.so
-odm/lib/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
 odm/lib/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so
 odm/lib/vendor.oplus.hardware.cammidasservice@1.0.so
 odm/lib/vendor.oplus.hardware.charger@1.0.so
@@ -3830,9 +3848,6 @@ odm/lib/vendor.oplus.hardware.misc@1.0.so
 odm/lib/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib/vendor.oplus.hardware.olc@2.0.so
 odm/lib/vendor.oplus.hardware.oplusSensor@1.0.so
-odm/lib/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/lib/vendor.oplus.hardware.orms@1.0.so
-odm/lib/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
 odm/lib/vendor.oplus.hardware.osense.client@1.0.so
 odm/lib/vendor.oplus.hardware.performance@1.0.so
 odm/lib/vendor.oplus.hardware.radio-V1-ndk_platform.so
@@ -3850,8 +3865,6 @@ odm/lib64/hw/audio.binaural_record.default.so
 odm/lib64/hw/vendor.oplus.hardware.bluetooth_audio_extend@2.1-impl.so
 odm/lib64/hw/vendor.oplus.hardware.gameopt@1.0-impl.so
 odm/lib64/WideDistortionParams.bin
-odm/lib64/anc.capacitive.hal.so
-odm/lib64/anc.hal.so
 odm/lib64/lib2DSlender.so
 odm/lib64/libAlgoInterface.so
 odm/lib64/libAlgoProcess.so
@@ -4022,7 +4035,6 @@ odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/liboplus_platform_hwi.so
 odm/lib64/liboplusblur_capture_api.so
 odm/lib64/liboprec.so
-odm/lib64/libormshalclient.so
 odm/lib64/libosensehalclient.so
 odm/lib64/libpngwrapper.so
 odm/lib64/libpnscr2.so
@@ -4062,7 +4074,6 @@ odm/lib64/libwvhdcpext.so
 odm/lib64/vendor.aac.hardware.richtap.vibrator-V1-ndk_platform.so
 odm/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
-odm/lib64/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
 odm/lib64/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 odm/lib64/vendor.oplus.hardware.charger@1.0.so
@@ -4083,9 +4094,6 @@ odm/lib64/vendor.oplus.hardware.misc@1.0.so
 odm/lib64/vendor.oplus.hardware.mtkmodemaci@1.0.so
 odm/lib64/vendor.oplus.hardware.olc@2.0.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
-odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/lib64/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 odm/lib64/vendor.oplus.hardware.performance@1.0.so
 odm/lib64/vendor.oplus.hardware.radio-V1-ndk_platform.so
@@ -4216,7 +4224,6 @@ vendor/bin/hw/vendor.mediatek.hardware.aee@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.trustonic.soter@1.0-service
@@ -4477,8 +4484,6 @@ vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -5431,7 +5436,6 @@ vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/manifest_soter.xml
 vendor/etc/vintf/manifest/memtrack-mediatek.xml
-vendor/etc/vintf/manifest/power-default.xml
 vendor/etc/vintf/manifest/vendor.mediatek.hardware.neuropilot.agent@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.oplus.hardware.wifi.supplicant.xml
 vendor/etc/voicecommand/training/ubmfile/keyword05/hhha/p2.3/p0
@@ -5715,7 +5719,6 @@ vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib/mt6895/gc02m1_mipi_raw_21143_tuning.so
@@ -5905,9 +5908,6 @@ vendor/lib/libnpagent.so
 vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpkm.so
-vendor/lib/libpower_timer.so
-vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpqframework.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
@@ -5960,8 +5960,6 @@ vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib/vendor.mediatek.hardware.mms@1.6.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so
-vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
@@ -5984,7 +5982,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/mt6895/gc02m1_mipi_raw_21143_tuning.so
@@ -6206,9 +6203,6 @@ vendor/lib64/libnpagent_server.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpkm.so
-vendor/lib64/libpower_timer.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpqframework.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/librpc.so
@@ -6282,8 +6276,6 @@ vendor/lib64/vendor.mediatek.hardware.log@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
@@ -6301,6 +6293,22 @@ vendor/res/images/lcd_test_02.png
 vendor/res/sound/CalibrationPatternOut.wav
 vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
+
+# Orms
+odm/bin/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-service
+odm/etc/init/vendor.oplus.hardware.orms.ormsHalService@1.0-service.rc
+odm/etc/orms/orms_permission_config.xml
+odm/etc/vintf/manifest/manifest_oplus_orms.xml
+odm/framework/vendor.oplus.hardware.orms-V1.0-java.jar
+odm/framework/vendor.oplus.hardware.orms.ormsHalService-V1.0-java.jar
+odm/lib/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
+odm/lib/libormshalclient.so
+odm/lib/vendor.oplus.hardware.orms.ormsHalService@1.0.so
+odm/lib/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
+odm/lib64/libormshalclient.so
+odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
+odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Osense
 system_ext/lib/vendor.oplus.hardware.osense.client@1.0.so
