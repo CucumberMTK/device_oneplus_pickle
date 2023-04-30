@@ -1906,6 +1906,13 @@
             <instance>mms/explorer</instance>
         </interface>
     </hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.graphics.allocator</name>
+    <interface>
+        <name>IAllocator</name>
+        <instance>default</instance>
+    </interface>
+</hal>
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>28.0</sepolicy-version>

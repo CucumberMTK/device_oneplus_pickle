@@ -1511,7 +1511,6 @@ vendor/lib64/libwvhidl.so
 
 # Fingerprint
 system/framework/android.hardware.biometrics.fingerprint-V2.3-java.jar
-system/framework/vendor.oplus.hardware.biometrics.fingerprint-V2.1-java.jar
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/lib/anc.hal.so
