@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<device name="Android">
+  <!-- Most values are the incremental current used by a feature,
+       in mA (measured at nominal voltage).
+       The default values are deliberately incorrect dummy values.
+       OEM's must measure and provide actual values before
+       shipping a device.
+       Example real-world values are given in comments, but they
+       are totally dependent on the platform and can vary
+       significantly, so should be measured on the shipping platform
+       with a power meter. -->
+  <item name="none">0</item>
+  <item name="ambient.on">76</item>
+  <item name="screen.on">136</item>  <!-- ~200mA -->
+  <item name="screen.full">288</item>  <!-- ~300mA -->
+  <item name="bluetooth.active">80</item> <!-- Bluetooth data transfer, ~10mA -->
+  <item name="bluetooth.on">1.8</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
+  <item name="wifi.on">2.8</item>  <!-- ~3mA -->
+  <item name="wifi.active">190</item>  <!-- WIFI data transfer, ~200mA -->
+  <item name="wifi.scan">130</item>  <!-- WIFI network scanning, ~100mA -->
+  <item name="audio">0</item> <!-- ~10mA -->
+  <item name="video">0</item> <!-- ~50mA -->
+  <item name="camera.flashlight">150</item> <!-- Avg. power for camera flash, ~160mA -->
+  <item name="camera.avg">650</item> <!-- Avg. power use of camera in standard usecases, ~550mA -->
+  <item name="gps.on">50</item> <!-- ~50mA -->
+
+  <item name="dsp.audio">10.4</item> <!-- ~10mA -->
+  <item name="dsp.video">30</item> <!-- ~50mA -->
+  <item name="bluetooth.controller.idle">1.7</item>  <!--new add -->
+  <item name="bluetooth.controller.rx">76</item>  <!--new add  -->
+  <item name="bluetooth.controller.tx">176</item>  <!--new add  -->
+  <item name="bluetooth.controller.voltage">3300</item>  <!--new add -->
+
+  <!-- Radio related values. For modems without energy reporting support in firmware, use
+       radio.active, radio.scanning, and radio.on. -->
+  <item name="radio.active">125</item> <!-- ~200mA -->
+  <item name="radio.scanning">5.4</item> <!-- cellular radio scanning for signal, ~10mA -->
+  <!-- Current consumed by the radio at different signal strengths, when paging -->
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+      <value>2</value> <!-- ~2mA -->
+      <value>1</value> <!-- ~1mA -->
+  </array>
+
+
+  <!-- Radio related values. For modems WITH energy reporting support in firmware, use
+       modem.controller.idle, modem.controller.tx, modem.controller.rx, modem.controller.voltage.
+       -->
+  <item name="modem.controller.idle">2</item>
+  <item name="modem.controller.rx">68</item>
+  <array name="modem.controller.tx"> <!-- Strength 0 to 4 -->
+      <value>168.4</value>
+      <value>183.8</value>
+      <value>221.3</value>
+      <value>350</value>
+      <value>500</value>
+  </array>
+  <item name="modem.controller.voltage">800</item>
+
+  <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
+       number of CPU cores for that cluster.
+
+       Ex:
+       <array name="cpu.clusters.cores">
+         <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
+         <value>2</value> // cluster 1 has cpu4, cpu5
+       </array> -->
+  <array name="cpu.clusters.cores">
+      <value>4</value> <!-- cluster 0 has cpu0 -->
+      <value>3</value> <!-- cluster 1 has cpu4, cpu5, cpu6 -->
+      <value>1</value> <!-- cluster 1 has cpu7 -->
+  </array>
+
+    <!-- Different CPU speeds for cluster 0 as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
+
+       There must be one of these for each cluster, labeled:
+       cpu.core_speeds.cluster0, cpu.core_speeds.cluster1, etc... -->
+  <array name="cpu.core_speeds.cluster0">
+      <value>450000</value>   <!-- 450  MHz CPU speed -->
+      <value>500000</value>   <!-- 500  MHz CPU speed -->
+      <value>550000</value>   <!-- 550  MHz CPU speed -->
+      <value>600000</value>  <!-- 600 MHz CPU speed -->
+      <value>650000</value>   <!-- 650  MHz CPU speed -->
+      <value>700000</value>   <!-- 700  MHz CPU speed -->
+      <value>750000</value>  <!-- 750 MHz CPU speed -->
+      <value>800000</value>   <!-- 800  MHz CPU speed -->
+      <value>850000</value>  <!-- 850 MHz CPU speed -->
+      <value>900000</value>   <!-- 900  MHz CPU speed -->
+      <value>950000</value>   <!-- 950  MHz CPU speed -->
+      <value>1000000</value>  <!-- 1000 MHz CPU speed -->
+      <value>1050000</value>   <!-- 1050  MHz CPU speed -->
+      <value>1100000</value>   <!-- 1100  MHz CPU speed -->
+      <value>1150000</value>   <!-- 1150  MHz CPU speed -->
+      <value>1200000</value>   <!-- 1200  MHz CPU speed -->
+      <value>1250000</value>  <!-- 1250 MHz CPU speed -->
+      <value>1300000</value>   <!-- 1300  MHz CPU speed -->
+      <value>1400000</value>   <!-- 1400  MHz CPU speed -->
+      <value>1500000</value>   <!-- 1500  MHz CPU speed -->
+      <value>1600000</value>   <!-- 1600  MHz CPU speed -->
+      <value>1700000</value>   <!-- 1700  MHz CPU speed -->
+      <value>1800000</value>  <!-- 1800 MHz CPU speed -->
+      <value>1900000</value>   <!-- 1900  MHz CPU speed -->
+      <value>2000000</value>  <!-- 2000 MHz CPU speed -->
+  </array>
+
+  <array name="cpu.core_speeds.cluster1">
+      <value>200000</value>   <!-- 200  MHz CPU speed -->
+      <value>300000</value>   <!-- 300  MHz CPU speed -->
+      <value>400000</value>   <!-- 400  MHz CPU speed -->
+      <value>500000</value>   <!-- 500  MHz CPU speed -->
+      <value>600000</value>   <!-- 600  MHz CPU speed -->
+      <value>700000</value>   <!--700  MHz CPU speed -->
+      <value>800000</value>   <!-- 800  MHz CPU speed -->
+      <value>900000</value>   <!-- 900  MHz CPU speed -->
+      <value>1000000</value>   <!-- 1000  MHz CPU speed -->
+      <value>1100000</value>   <!-- 1100  MHz CPU speed -->
+      <value>1200000</value>   <!-- 1200  MHz CPU speed -->
+      <value>1300000</value>   <!-- 1300  MHz CPU speed -->
+      <value>1400000</value>   <!-- 1400  MHz CPU speed -->
+      <value>1500000</value>   <!-- 1500  MHz CPU speed -->
+      <value>1600000</value>   <!-- 1600  MHz CPU speed -->
+      <value>1700000</value>   <!-- 1700  MHz CPU speed -->
+      <value>1800000</value>   <!-- 1800  MHz CPU speed -->
+      <value>1900000</value>   <!-- 1900  MHz CPU speed -->
+      <value>2000000</value>   <!-- 2000  MHz CPU speed -->
+      <value>2050000</value>   <!-- 2050  MHz CPU speed -->
+      <value>2100000</value>   <!-- 2100  MHz CPU speed -->
+      <value>2150000</value>   <!-- 2150  MHz CPU speed -->
+      <value>2200000</value>  <!-- 2200 MHz CPU speed -->
+      <value>2250000</value>   <!-- 2250  MHz CPU speed -->
+      <value>2300000</value>   <!-- 2300  MHz CPU speed -->
+      <value>2350000</value>   <!-- 2350  MHz CPU speed -->
+      <value>2400000</value>   <!-- 2400  MHz CPU speed -->
+      <value>2450000</value>   <!-- 2450  MHz CPU speed -->
+      <value>2550000</value>   <!-- 2550  MHz CPU speed -->
+      <value>2650000</value>   <!-- 2650  MHz CPU speed -->
+      <value>2750000</value>   <!-- 2750  MHz CPU speed -->
+      <value>2850000</value>   <!-- 2850  MHz CPU speed -->
+  </array>
+
+  <array name="cpu.core_speeds.cluster2">
+      <value>500000</value>   <!-- 500  MHz CPU speed -->
+      <value>600000</value>   <!-- 600  MHz CPU speed -->
+      <value>700000</value>   <!-- 700  MHz CPU speed -->
+      <value>800000</value>   <!-- 800  MHz CPU speed -->
+      <value>900000</value>   <!-- 900  MHz CPU speed -->
+      <value>1000000</value>   <!-- 1000  MHz CPU speed -->
+      <value>1100000</value>   <!-- 1100  MHz CPU speed -->
+      <value>1200000</value>   <!-- 1200  MHz CPU speed -->
+      <value>1300000</value>   <!-- 1300  MHz CPU speed -->
+      <value>1400000</value>   <!-- 1400  MHz CPU speed -->
+      <value>1500000</value>   <!-- 1500  MHz CPU speed -->
+      <value>1600000</value>   <!-- 1600  MHz CPU speed -->
+      <value>1700000</value>   <!-- 1700  MHz CPU speed -->
+      <value>1800000</value>   <!-- 1800  MHz CPU speed -->
+      <value>1900000</value>   <!-- 1900  MHz CPU speed -->
+      <value>2000000</value>   <!-- 2000  MHz CPU speed -->
+      <value>2050000</value>   <!-- 2050  MHz CPU speed -->
+      <value>2100000</value>   <!-- 2100  MHz CPU speed -->
+      <value>2150000</value>   <!-- 2150  MHz CPU speed -->
+      <value>2200000</value>   <!-- 2200  MHz CPU speed -->
+      <value>2250000</value>   <!-- 2250  MHz CPU speed -->
+      <value>2300000</value>   <!-- 2300  MHz CPU speed -->
+      <value>2350000</value>   <!-- 2350  MHz CPU speed -->
+      <value>2400000</value>   <!-- 2400  MHz CPU speed -->
+      <value>2450000</value>   <!-- 2450  MHz CPU speed -->
+      <value>2550000</value>   <!-- 2550  MHz CPU speed -->
+      <value>2650000</value>   <!-- 2650  MHz CPU speed -->
+      <value>2750000</value>   <!-- 2750  MHz CPU speed -->
+      <value>2850000</value>   <!-- 2850  MHz CPU speed -->
+  </array>
+
+  <!-- Current at each CPU speed for cluster 0, as per 'cpu.core_speeds.cluster0'.
+       Like cpu.core_speeds.cluster0, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+  <array name="cpu.core_power.cluster0">
+      <value>17.193</value>  <!-- ~17mA -->
+      <value>18.475</value>  <!-- ~18mA -->
+      <value>19.761</value>  <!-- ~19mA -->
+      <value>21.068</value>  <!-- ~21mA -->
+      <value>22.563</value>  <!-- ~22mA -->
+      <value>24.987</value>  <!-- ~25mA -->
+      <value>26.616</value>  <!-- ~26mA -->
+      <value>28.245</value>  <!-- ~28mA -->
+      <value>30.015</value>  <!-- ~30mA -->
+      <value>31.840</value>  <!-- ~31mA -->
+      <value>34.964</value>  <!-- ~35mA -->
+      <value>37.183</value>  <!-- ~37mA -->
+      <value>39.061</value>  <!-- ~39mA -->
+      <value>40.792</value>  <!-- ~40mA -->
+      <value>43.434</value>  <!-- ~43mA -->
+      <value>46.257</value>  <!-- ~46mA -->
+      <value>48.764</value>  <!-- ~48mA -->
+      <value>51.619</value>  <!-- ~51mA -->
+      <value>56.572</value>  <!-- ~56mA -->
+      <value>63.866</value>  <!-- ~64mA -->
+      <value>71.759</value>  <!-- ~71mA -->
+      <value>80.155</value>  <!-- ~80mA -->
+      <value>88.525</value>  <!-- ~88mA -->
+      <value>96.636</value>  <!-- ~96mA -->
+      <value>110.316</value>  <!-- ~110mA -->
+  </array>
+
+  <array name="cpu.core_power.cluster1">
+      <value>25.915</value>  <!-- ~26mA -->
+      <value>35.193</value>  <!-- ~35mA -->
+      <value>44.502</value>  <!-- ~44mA -->
+      <value>52.848</value>  <!-- ~52mA -->
+      <value>61.729</value>  <!-- ~62mA -->
+      <value>73.848</value>  <!-- ~74mA -->
+      <value>89.262</value>  <!-- ~89mA -->
+      <value>103.849</value>  <!-- ~104mA -->
+      <value>116.667</value>  <!-- ~116mA -->
+      <value>133.852</value>  <!-- ~133mA -->
+      <value>153.876</value>  <!-- ~154mA -->
+      <value>175.607</value>  <!-- ~175mA -->
+      <value>202.506</value>  <!-- ~202mA -->
+      <value>221.863</value>  <!-- ~221mA -->
+      <value>245.504</value>  <!-- ~245mA -->
+      <value>267.829</value>  <!-- ~267mA -->
+      <value>293.927</value>  <!-- ~293mA -->
+      <value>326.185</value>  <!-- ~326mA -->
+      <value>356.003</value>  <!-- ~356mA -->
+      <value>367.803</value>  <!-- ~367mA -->
+      <value>380.150</value>  <!-- ~380mA -->
+      <value>404.849</value>  <!-- ~404mA -->
+      <value>422.904</value>  <!-- ~422mA -->
+      <value>442.381</value>  <!-- ~442mA -->
+      <value>476.797</value>  <!-- ~476mA -->
+      <value>504.379</value>  <!-- ~504mA -->
+      <value>533.936</value>  <!-- ~533mA -->
+      <value>579.859</value>  <!-- ~579mA -->
+      <value>636.187</value>  <!-- ~636mA -->
+      <value>695.637</value>  <!-- ~695mA -->
+      <value>778.164</value>  <!-- ~778mA -->
+      <value>855.007</value>  <!-- ~855mA -->
+  </array>
+
+  <!-- Current at each CPU speed for cluster 2, as per 'cpu.core_speeds.cluster2'.
+       Like cpu.core_speeds.cluster2, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+  <array name="cpu.core_power.cluster2">
+      <value>52.824</value>  <!-- ~52mA -->
+      <value>66.614</value>  <!-- ~66mA -->
+      <value>79.594</value>  <!-- ~79mA -->
+      <value>93.839</value>  <!-- ~93mA -->
+      <value>108.753</value>  <!-- ~108mA -->
+      <value>127.826</value>  <!-- ~127mA -->
+      <value>144.796</value>  <!-- ~144mA -->
+      <value>163.484</value>  <!-- ~163mA -->
+      <value>173.867</value>  <!-- ~173mA -->
+      <value>196.247</value>  <!-- ~197mA -->
+      <value>221.749</value>  <!-- ~221mA -->
+      <value>245.126</value>  <!-- ~245mA -->
+      <value>270.940</value>  <!-- ~270mA -->
+      <value>300.889</value>  <!-- ~330mA -->
+      <value>325.346</value>  <!-- ~325mA -->
+      <value>349.678</value>  <!-- ~349mA -->
+      <value>375.645</value>  <!-- ~375mA -->
+      <value>392.179</value>  <!-- ~392mA -->
+      <value>412.619</value>  <!-- ~412mA -->
+      <value>447.955</value>  <!-- ~447mA -->
+      <value>463.148</value>  <!-- ~463mA -->
+      <value>482.578</value>  <!-- ~483mA -->
+      <value>514.347</value>  <!-- ~514mA -->
+      <value>536.618</value>  <!-- ~536mA -->
+      <value>560.493</value>  <!-- ~560mA -->
+      <value>619.436</value>  <!-- ~619mA -->
+      <value>731.152</value>  <!-- ~731mA -->
+      <value>845.194</value>  <!-- ~845mA -->
+      <value>985.291</value>  <!-- ~985mA -->
+  </array>
+
+  <item name="cpu.awake">8</item>
+  <!-- Additional power consumption by CPU excluding cluster and core when  running -->
+  <!-- Current when CPU is idle -->
+  <item name="cpu.idle">9.5</item>
+
+  <!-- Memory bandwidth power values in mA at the rail. There must be one value
+       for each bucket defined in the device tree. -->
+  <array name="memory.bandwidths">
+    <value>22.7</value> <!-- mA for bucket: 100mb/s-1.5 GB/s memory bandwidth -->
+  </array>
+
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">4500</item>
+
+  <!-- Wifi related values. -->
+  <!-- Idle Receive current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.idle">1.35</item>
+  <!-- Rx current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.rx">180</item>
+  <!-- Tx current for wifi radio in mA. 0 by default-->
+  <item name="wifi.controller.tx">205</item>
+  <!-- Current at each of the wifi Tx levels in mA. The number of tx levels varies per device
+       and is available only of wifi chipsets which support the tx level reporting. Use
+        wifi.tx for other chipsets. none by default -->
+  <array name="wifi.controller.tx_levels"> <!-- mA -->
+  </array>
+  <!-- Operating volatage for wifi radio in mV. 0 by default-->
+  <item name="wifi.controller.voltage">3300</item>
+
+  <array name="wifi.batchedscan"> <!-- mA -->
+    <value>.0002</value> <!-- 1-8/hr -->
+    <value>.002</value>  <!-- 9-64/hr -->
+    <value>.02</value>   <!-- 65-512/hr -->
+    <value>.2</value>    <!-- 513-4,096/hr -->
+    <value>2</value>    <!-- 4097-/hr -->
+  </array>
+
+</device>

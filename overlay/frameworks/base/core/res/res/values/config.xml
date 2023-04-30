@@ -85,7 +85,6 @@
     <bool name="config_showNavigationBar">true</bool>
     <bool name="config_supportsCamToggle">true</bool>
     <bool name="config_supportsMicToggle">true</bool>
-    <bool name="allow_test_udfps">false</bool>
     <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
     <bool name="config_bluetooth_address_validation">false</bool>
     <bool name="config_bluetooth_default_profiles">true</bool>

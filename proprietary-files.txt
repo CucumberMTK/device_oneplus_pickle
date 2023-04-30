@@ -7,6 +7,24 @@ odm/lib64/libadsprpc.so
 etc/apns-conf.xml
 vendor/etc/vendor-apns-conf.xml
 
+# APU Wares
+system_ext/lib/libapuwareapusys.mtk.so
+system_ext/lib/libapuwarehmp.mtk.so
+system_ext/lib/libapuwareutils.mtk.so
+system_ext/lib/libapuwarexrp.mtk.so
+system_ext/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.xrp@1.0.so
+system_ext/lib64/libapuwareapusys.mtk.so
+system_ext/lib64/libapuwarehmp.mtk.so
+system_ext/lib64/libapuwareutils.mtk.so
+system_ext/lib64/libapuwarexrp.mtk.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
+
 # Audio
 vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
@@ -1477,6 +1495,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.0.so
 vendor/lib64/vendor.pixelworks.hardware.display@1.1.so
 vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so
+-vendor/priv-app/GpuGameDriver.mt6895/GpuGameDriver.mt6895.apk
 
 # DRM
 odm/lib/liboemcrypto.so
@@ -1491,6 +1510,8 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
 # Fingerprint
+system/framework/android.hardware.biometrics.fingerprint-V2.3-java.jar
+system/framework/vendor.oplus.hardware.biometrics.fingerprint-V2.1-java.jar
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/lib/anc.hal.so
@@ -1524,12 +1545,6 @@ odm/lib64/libgf_hal_G7.so
 odm/lib64/libsl_fp_impl.so
 odm/lib64/anc.capacitive.hal.so
 odm/lib64/anc.hal.so
-odm/lib/android.hardware.biometrics.fingerprint@2.1.so
-odm/lib/android.hardware.biometrics.fingerprint@2.2.so
-odm/lib/android.hardware.biometrics.fingerprint@2.3.so
-odm/lib64/android.hardware.biometrics.fingerprint@2.1.so
-odm/lib64/android.hardware.biometrics.fingerprint@2.2.so
-odm/lib64/android.hardware.biometrics.fingerprint@2.3.so
 odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprintpay@1.0.so
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
@@ -1702,7 +1717,6 @@ vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpower_timer.so
 vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpower_timer.so
-vendor/etc/vintf/manifest/power-default.xml
 
 # Radio
 system_ext/etc/init/datafree.rc
@@ -1773,6 +1787,7 @@ vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
 vendor/lib64/hw/sound_trigger.primary.default.so
 
 # Thermal
+vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
 vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
@@ -5590,7 +5605,6 @@ vendor/etc/oplus_avb.pubkey
 vendor/etc/partition_permission.sh
 vendor/etc/power_app_cfg.xml
 vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
 vendor/etc/public.libraries.txt
 vendor/etc/slp_conf
 vendor/etc/smsdbvisitor.xml
@@ -6295,19 +6309,7 @@ vendor/res/sound/ringtone.wav
 vendor/res/sound/testpattern1.wav
 
 # Orms
-odm/bin/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-service
-odm/etc/init/vendor.oplus.hardware.orms.ormsHalService@1.0-service.rc
-odm/etc/orms/orms_permission_config.xml
-odm/etc/vintf/manifest/manifest_oplus_orms.xml
-odm/framework/vendor.oplus.hardware.orms-V1.0-java.jar
-odm/framework/vendor.oplus.hardware.orms.ormsHalService-V1.0-java.jar
-odm/lib/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
-odm/lib/libormshalclient.so
-odm/lib/vendor.oplus.hardware.orms.ormsHalService@1.0.so
-odm/lib/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/hw/vendor.oplus.hardware.orms.ormsHalService@1.0-impl.so
 odm/lib64/libormshalclient.so
-odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Osense
@@ -6336,7 +6338,6 @@ vendor/bin/mtk_agpsd
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 lib64/libsink.so
 vendor/bin/hw/mt6895/camerahalserver
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 
 # Vibrator
 system_ext/bin/hapticscreencap
@@ -6381,3 +6382,4 @@ vendor/lib64/libjnisingleblur_api.so
 vendor/lib64/libjnistblur_api.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libsingle_camera_bokeh_native.so
+

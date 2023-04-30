@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1
+
 # FS tools
  PRODUCT_PACKAGES += \
     e2fsck \
@@ -174,7 +178,8 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.pickle
+    android.hardware.biometrics.fingerprint@2.3-service.oplus \
+    libshims_fingerprint.oplus
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -406,7 +411,8 @@ BOARD_HAS_MTK_HARDWARE := true
 
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/mediatek
+    hardware/mediatek \
+    hardware/oplus
 
 # Touch
 #PRODUCT_PACKAGES += \
