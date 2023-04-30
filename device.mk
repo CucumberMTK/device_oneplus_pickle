@@ -279,6 +279,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     orms_core_config
 
+# Xiaomi Parts
+PRODUCT_PACKAGES += \
+    OplusParts \
+    gpu_optimizer.rc
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

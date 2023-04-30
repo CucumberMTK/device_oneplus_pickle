@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Ambient settings -->
+    <string name="ambient_enable">Use ambient display</string>
+
+    <!-- Dolby -->
+    <string name="dolby_title">Dolby Atmos</string>
+    <string name="dolby_summary">Setting Dolby Atmos</string>
+
+    <!-- GPU -->
+    <string name="gpu_title">GPU Optimizer</string>
+    <string name="gpu_summary">Adjust GPU governor or limit GPU maximum frequency</string>
+
+    <string name="gpu_governor">GPU Governor</string>
+    <string name="gpu_governor_default">Default</string>
+    <string name="gpu_governor_ondemand">Ondemand</string>
+    <string name="gpu_governor_performance">Performance</string>
+    <string name="gpu_governor_powersave">Powersave</string>
+
+    <string name="gpu_max_frequency">GPU Maximum Frequency</string>
+
+    <!-- Refresh Rate tile -->
+    <string name="refresh_rate_tile_title">Refresh Rate</string>
+    
+    <!-- Refresh Rate per-app -->
+    <string name="refresh_title">Refresh rate per-app</string>
+    <string name="refresh_summary">Set a specific refresh rate for each application</string>
+    <string name="refresh_default">Default</string>
+    <string name="refresh_low">Low (30Hz)</string>
+    <string name="refresh_moderate">Moderate (50Hz)</string>
+    <string name="refresh_standard">Standard (60Hz)</string>
+    <string name="refresh_high">High (90Hz)</string>
+    <string name="refresh_extreme">Extreme (120Hz)</string>
+
+</resources>
