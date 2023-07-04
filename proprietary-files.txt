@@ -6342,6 +6342,17 @@ vendor/bin/hw/mt6895/camerahalserver
 system_ext/bin/hapticscreencap
 system_ext/etc/init/hapticscreencap.rc
 
+# ndk_platform
+vendor/lib64/android.hardware.gnss-V1-ndk_platform.so
+vendor/lib64/android.hardware.memtrack-V1-ndk_platform.so
+vendor/lib64/android.hardware.power-V2-ndk_platform.so
+vendor/lib64/android.hardware.security.keymint-V1-ndk_platform.so
+vendor/lib64/android.hardware.security.sharedsecret-V1-ndk_platform.so
+vendor/lib64/android.hardware.security.secureclock-V1-ndk_platform.so
+vendor/lib64/android.hardware.vibrator-V2-ndk_platform.so
+vendor/lib64/android.system.keystore2-V1-ndk_platform.so
+vendor/lib64/android.hardware.light-V1-ndk_platform.so
+
 # My_product
 vendor/etc/cust_silky_brightness_boe.xml
 vendor/etc/cust_silky_brightness_tianma.xml
