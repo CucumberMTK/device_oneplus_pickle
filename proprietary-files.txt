@@ -8,6 +8,10 @@ etc/apns-conf.xml
 vendor/etc/vendor-apns-conf.xml
 
 # Audio
+vendor/bin/hw/android.hardware.audio.service.mediatek
+vendor/etc/init/android.hardware.audio.service.mediatek.rc
+vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so
+vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
 vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.mediatek.so
 vendor/lib/hw/audio.r_submix.default.so
@@ -44,6 +48,8 @@ vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib/vendor.oplus.hardware.olc@2.0.so
 vendor/lib/vendor.oplus.hardware.performance@1.0.so
+vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
+vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mediatek.so
 vendor/lib64/hw/audio.r_submix.default.so
@@ -350,6 +356,7 @@ system_ext/etc/hearing_aid_audio_policy_configuration.xml
 system_ext/etc/r_submix_audio_policy_configuration.xml
 system_ext/etc/usb_audio_policy_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml
@@ -1656,6 +1663,11 @@ odm/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # NFC configs
 odm/etc/libnfc-nci.conf
+
+# Power
+odm/bin/hw/android.hardware.power.stats-impl.oplus
+odm/etc/init/android.hardware.power.stats-service.oplus.rc
+odm/etc/vintf/manifest/android.hardware.power.stats-service.oplus.xml
 
 # Radio
 system_ext/etc/init/datafree.rc
@@ -6320,17 +6332,6 @@ vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 # Vibrator
 system_ext/bin/hapticscreencap
 system_ext/etc/init/hapticscreencap.rc
-
-# ndk_platform
-vendor/lib64/android.hardware.gnss-V1-ndk_platform.so
-vendor/lib64/android.hardware.memtrack-V1-ndk_platform.so
-vendor/lib64/android.hardware.power-V2-ndk_platform.so
-vendor/lib64/android.hardware.security.keymint-V1-ndk_platform.so
-vendor/lib64/android.hardware.security.sharedsecret-V1-ndk_platform.so
-vendor/lib64/android.hardware.security.secureclock-V1-ndk_platform.so
-vendor/lib64/android.hardware.vibrator-V2-ndk_platform.so
-vendor/lib64/android.system.keystore2-V1-ndk_platform.so
-vendor/lib64/android.hardware.light-V1-ndk_platform.so
 
 # My_product
 vendor/etc/cust_silky_brightness_boe.xml

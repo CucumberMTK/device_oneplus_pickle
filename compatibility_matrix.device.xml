@@ -1525,13 +1525,35 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.oplus.hardware.orms</name>
+        <name>vendor.oplus.hardware.orms.ormsHalService</name>
         <version>1.0</version>
         <interface>
-            <name>IOrmsHalProxy</name>
-            <instance>ORMS_HAL_PROXY</instance>
+            <name>IOrmsHalService</name>
+            <instance>default</instance>
         </interface>
-    </hal> 
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.orms.ormsHalService</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOrmsHalService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.ormsHalService</name>
+        <interface>
+            <name>IOrmsAidlHalService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.ormsHalService</name>
+        <interface>
+            <name>IOrmsAidlHalService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.oplus.hardware.performance</name>
         <version>1.0</version>
@@ -1906,13 +1928,6 @@
             <instance>mms/explorer</instance>
         </interface>
     </hal>
-<hal format="hidl" optional="true">
-    <name>android.hardware.graphics.allocator</name>
-    <interface>
-        <name>IAllocator</name>
-        <instance>default</instance>
-    </interface>
-</hal>
     <sepolicy>
         <kernel-sepolicy-version>30</kernel-sepolicy-version>
         <sepolicy-version>28.0</sepolicy-version>
