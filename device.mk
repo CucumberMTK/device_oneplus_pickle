@@ -146,6 +146,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
+# NDK Platform backend
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk_platform.vendor:64 \
+    android.hardware.memtrack-V1-ndk_platform.vendor:64 \
+    android.hardware.power-V2-ndk_platform.vendor:64 \
+    android.hardware.security.keymint-V1-ndk_platform.vendor:64 \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor:64 \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor:64 \
+    android.hardware.vibrator-V1-ndk_platform.vendor:64 \
+    android.system.keystore2-V1-ndk_platform.vendor:64
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
@@ -239,6 +250,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
+
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/oneplus/pickle/pickle-vendor.mk)
