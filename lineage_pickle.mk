@@ -14,6 +14,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from pickle device
 $(call inherit-product, device/oneplus/pickle/device.mk)
 
+# Prebuilt gapps
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 PRODUCT_DEVICE := pickle
 PRODUCT_NAME := lineage_pickle
 PRODUCT_BRAND := OnePlus
