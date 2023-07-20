@@ -1,2 +1,4 @@
 # Audio
-ro.config.vc_call_vol_steps=7
+#ro.config.vc_call_vol_steps=7
+ro.control_privapp_permissions=log
+

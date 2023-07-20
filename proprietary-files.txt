@@ -1665,6 +1665,8 @@ odm/lib64/vendor.nxp.hardware.nfc@2.0.so
 odm/etc/libnfc-nci.conf
 
 # Power
+-vendor/lib/libpowerhal.so
+-vendor/lib64/libpowerhal.so
 odm/bin/hw/android.hardware.power.stats-impl.oplus
 odm/etc/init/android.hardware.power.stats-service.oplus.rc
 odm/etc/vintf/manifest/android.hardware.power.stats-service.oplus.xml
@@ -5910,7 +5912,6 @@ vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpkm.so
 vendor/lib/libpower_timer.so
-vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpqframework.so
 vendor/lib/librcs_interface.so
@@ -6211,7 +6212,6 @@ vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpkm.so
 vendor/lib64/libpower_timer.so
-vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpqframework.so
 vendor/lib64/librgbwlightsensor.so
