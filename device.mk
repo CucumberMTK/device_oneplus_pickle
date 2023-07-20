@@ -345,7 +345,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor
-    
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
@@ -365,10 +365,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
-# VNDK
-PRODUCT_PACKAGES += \
+ # VNDK
+ PRODUCT_PACKAGES += \
     libutils-v32 \
-    libcrypto-v32
+    libcrypto-v32 \
+    libstagefright_foundation \
+    libstagefright_omx
 
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
