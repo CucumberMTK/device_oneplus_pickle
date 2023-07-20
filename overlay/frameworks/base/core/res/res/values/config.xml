@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Linux Foundation
+     SPDX-License-Identifier: BSD-3-Clause
+-->
+
+<resources>
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
+    </string-array>
+
+    <integer-array name="config_clockTickVibePattern">
+        <item>0</item>
+        <item>10</item>
+    </integer-array>
+
+    <integer-array name="config_defaultNotificationVibePattern">
+        <item>0</item>
+        <item>200</item>
+        <item>200</item>
+        <item>0</item>
+    </integer-array>
+
+    <integer-array name="config_doubleClickVibePattern">
+        <item>0</item>
+        <item>30</item>
+        <item>100</item>
+        <item>30</item>
+    </integer-array>
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>30</item>
+    </integer-array>
+    <integer-array name="config_notificationFallbackVibePattern">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>0</item>
+    </integer-array>
+    <integer-array name="config_safeModeEnabledVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+        <item>500</item>
+        <item>600</item>
+    </integer-array>
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>20</item>
+    </integer-array>
+
+    <string-array name="config_udfps_enroll_stage_thresholds">
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>0.875</item>
+    </string-array>
+
+    <!-- Default screen brightness for VR setting. Target default value: 0x0BB for EVT1.1. -->
+    <!-- 8 bit brightness level of 6 corresponds to the 10 bit brightness level of 0x0B6,
+         8 bit brightness level of 7 corresponds to the 10 bit brightness level of 0x0C1 on EVT1.1. -->
+    <integer name="config_screenBrightnessForVrSettingDefault">7</integer>
+    <integer name="config_screenBrightnessForVrSettingMinimum">6</integer>
+    <integer name="config_screenBrightnessForVrSettingMaximum">7</integer>
+
+    <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
+         Software implementation will be used if config_hardware_auto_brightness_available is not set -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <bool name="config_enableWifiDisplay">true</bool>
+    <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
+    <bool name="config_hearing_aid_profile_supported">true</bool>
+    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_supportsCamToggle">true</bool>
+    <bool name="config_supportsMicToggle">true</bool>
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
+    <bool name="config_bluetooth_address_validation">false</bool>
+    <bool name="config_bluetooth_default_profiles">true</bool>
+    <bool name="config_bluetooth_hfp_inband_ringing_support">false</bool>
+    <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
+    <bool name="config_bluetooth_pan_enable_autoconnect">false</bool>
+    <bool name="config_bluetooth_reload_supported_profiles_when_enabled">false</bool>
+    <bool name="config_bluetooth_sco_off_call">true</bool>
+
+    <integer name="config_shortPressOnPowerBehavior">1</integer>
+
+    <string name="config_mainBuiltInDisplayCutout">M -160,0 L -180, 0 L -180, 40 L -130, 40 L -130, 0 Z @dp</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">@string/config_mainBuiltInDisplayCutout</string>
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+
+    <integer name="config_num_physical_slots">2</integer>
+
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
+    <!-- The default intensity level for haptic feedback. See
+         Settings.System.HAPTIC_FEEDBACK_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultHapticFeedbackIntensity">3</integer>
+
+    <!-- The default intensity level for notification vibrations. See
+         Settings.System.NOTIFICATION_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
+
+    <!-- The default intensity level for ring vibrations. See
+         Settings.System.RING_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultRingVibrationIntensity">3</integer>
+
+    <!-- The type of the light sensor to be used by the display framework for things like
+         auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
+    <string name="config_displayLightSensorType">android.sensor.wise_light</string>
+
+</resources>
