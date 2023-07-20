@@ -90,6 +90,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.bluetooth.audio-impl
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.a2dp_offload.disabled=true
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
